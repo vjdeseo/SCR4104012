@@ -1,0 +1,157 @@
+/*------------------------------------------------------*/
+/*-----------------BANNER-------------------------------*/
+/*------------------------------------------------------*/
+.parent-header{
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+}
+
+.main-banner{
+  height: 50px;
+  background-color: rgb(31,56,98);
+  color: white;
+  padding: 0px 10px;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+.banner-container{
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 100%;
+  padding: 0%;
+  margin: 0%;
+  height: auto;
+
+}
+.img-container{
+  display: flex;
+  align-items: center;
+}
+
+.img-container img{
+  height: 30px;
+  object-fit: cover;
+}
+
+.banner-name{
+  display: flex;
+  align-items: center;
+}
+
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
+
+
+/*-------------------------------------------------------*/
+/*-----------------BREADCRUMB----------------------------*/
+/*-------------------------------------------------------*/
+
+.breadcrumb-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  background-color: #fafafa;
+}
+
+.breadcrumb{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  width: 100%;
+  padding: 5px 0px;
+  list-style: none;
+  background-color: #fafafa;
+  margin: 0px 20px;
+}
+
+.breadcrumb a{
+  color: black;
+  text-decoration: none;
+  padding: 3px;
+}
+
+.breadcrumb a:hover{
+  border-radius: 5px;
+}
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: ">";
+}
+
+.event-logs-btn{
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  background-color: rgb(143, 188, 143);
+}
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
+
+/*------------------------------------------------------*/
+/*-----------------TITLE ENDORSEMENT--------------------*/
+/*------------------------------------------------------*/
+
+.title-endorsement{
+  background-color: rgb(31,56,98);
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40% 0 25vh;
+}
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
+
+/*------------------------------------------------------*/
+/*-----------------SIDE NAV AND CONTENT-----------------*/
+/*------------------------------------------------------*/
+
+/* SIDE NAV*/
+.main-container {
+  top: 15.5vh;
+  background-color: white;
+}
+
+.content{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sidenav{
+  padding: 10px;
+  background-color: lightgray;
+  width: 15%;
+  font-size: 11px;
+}
+
+/*CONTENT(STEPPER)*/
+
+.mat-stepper-vertical {
+  margin-top: 8px;
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}
+::ng-deep .mat-step-icon.mat-step-icon-state-number.mat-step-icon-selected{
+  background-color: orangered;
+}
+::ng-deep .mat-step-icon.mat-step-icon-state-edit{
+  background-color: orangered;
+}
+::ng-deep .mat-step-text-label.ng-star-inserted{
+  padding-left: 100px;
+}
+
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
