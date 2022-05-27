@@ -1,3 +1,7 @@
+:host{
+  font-family: 'Poppins', sans-serif; 
+}
+
 /*------------------------------------------------------*/
 /*-----------------BANNER-------------------------------*/
 /*------------------------------------------------------*/
@@ -117,8 +121,9 @@ ul.breadcrumb li+li:before {
 
 /* SIDE NAV*/
 .main-container {
-  top: 15.5vh;
+  top: 12vh;
   background-color: white;
+  height: 80vh;
 }
 
 .content{
@@ -132,6 +137,30 @@ ul.breadcrumb li+li:before {
   width: 15%;
   font-size: 11px;
 }
+/* SIDE NAV CONTAINER*/
+::ng-deep .summary-content.mat-form-field-appearance-fill.mat-form-field-disabled .mat-form-field-flex{
+  background-color: lightgray;
+}
+
+.summary-container{
+  font-size: 11px;
+}
+
+::ng-deep .summary-content{
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  padding: 0px;
+}
+
+::ng-deep .mat-drawer{
+  border-radius: 2px;
+}
+
+/*----------------*/
+
 
 /*CONTENT(STEPPER)*/
 
@@ -139,19 +168,37 @@ ul.breadcrumb li+li:before {
   margin-top: 8px;
 }
 
-.mat-form-field {
-  margin-top: 16px;
-}
 ::ng-deep .mat-step-icon.mat-step-icon-state-number.mat-step-icon-selected{
   background-color: orangered;
 }
+
 ::ng-deep .mat-step-icon.mat-step-icon-state-edit{
   background-color: orangered;
 }
+
 ::ng-deep .mat-step-text-label.ng-star-inserted{
   padding-left: 100px;
 }
 
+
+.bottom-navigation{
+  width: 98%;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.bottom-navigation button{
+  margin: 0 2px;
+}
+::ng-deep .mat-button-wrapper{
+  font-family: 'Poppins', sans-serif;
+}
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
