@@ -2,50 +2,50 @@
 <!----------------------------------------BANNER---------------------------------------------------->
 <!-------------------------------------------------------------------------------------------------->
 <div class="parent-header">
-  <div class="main-banner">
-      <div class="banner-container">
-        <div class="" style="display: flex; align-items: center;">
-              <div class="img-container">
-                <img src="assets/img-src/bg.png" alt="">
-              </div>
-          </div>
+    <div class="main-banner">
+        <div class="banner-container">
+            <div class="" style="display: flex; align-items: center;">
+                <div class="img-container">
+                    <img src="assets/img-src/bg.png" alt="">
+                </div>
+            </div>
 
-          <div class="" style="font-size: 13px;">
-              <span class="" style="font-size: 25px">Integrated&nbsp;Insurance&nbsp;Brokerage&nbsp;System&nbsp;</span>
-              <span class="" style="font-size: 13px;">v5</span>
-          </div>
+            <div class="" style="font-size: 13px;">
+                <span class="" style="font-size: 25px">Integrated&nbsp;Insurance&nbsp;Brokerage&nbsp;System&nbsp;</span>
+                <span class="" style="font-size: 13px;">v5</span>
+            </div>
 
-          <div class="banner-name">
-              <span style="font-size: 12px;">Juan&nbsp;Dela&nbsp;Cruz</span>
+            <div class="banner-name">
+                <span style="font-size: 12px;">Juan&nbsp;Dela&nbsp;Cruz</span>
 
-              <div class="dropdown">
-                <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                <div class="dropdown">
+                    <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
                     <mat-icon>more_vert</mat-icon>
                     </button>
                 </div>
-          </div>
-      </div>
+            </div>
+        </div>
     </div>
 
-  <div class="breadcrumb-container">
-    <ul class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Transaction</a></li>
-        <li><a href="#">Endorsement</a></li>
-        <li><a href="#">Create Endorsement</a></li>
-        <li style="font-family: 'Poppins', sans-serif;"><a class="active" href="#"><b>Process&nbsp;Endorsement</b></a></li>
-    </ul>
+    <div class="breadcrumb-container">
+        <ul class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Transaction</a></li>
+            <li><a href="#">Endorsement</a></li>
+            <li><a href="#">Create Endorsement</a></li>
+            <li style="font-family: 'Poppins', sans-serif;"><a class="active" href="#"><b>Process&nbsp;Endorsement</b></a></li>
+        </ul>
 
-    <div class="">
-      <button class="event-logs-btn" mat-raised-button>Event&nbsp;Logs</button>
+        <div class="">
+            <button class="event-logs-btn" mat-raised-button>Event&nbsp;Logs</button>
+        </div>
+
     </div>
 
-  </div>
-
-  <div class="title-endorsement">
-    <span>Transaction&nbsp;No.&nbsp;9172</span>
-    <span>ENDORSEMENTS</span>
-  </div>
+    <div class="title-endorsement">
+        <span>Transaction&nbsp;No.&nbsp;9172</span>
+        <span>ENDORSEMENTS</span>
+    </div>
 
 </div>
 <!-------------------------------------------------------------------------------------------------->
@@ -58,221 +58,293 @@
 <!--SIDE NAV-->
 <mat-drawer-container class="main-container">
     <mat-drawer #drawer class="sidenav" mode="side" position="end">
-      <div style="display:flex; justify-content: space-between">
-        <p><b>ENDORSEMENT REQUEST SUMMARY</b></p>
-        <button type="button" mat-raised-button (click)="drawer.toggle()" style="border: solid 1px darkblue; background-color:white">
+        <div style="display:flex; justify-content: space-between">
+            <p><b>ENDORSEMENT REQUEST SUMMARY</b></p>
+            <button type="button" mat-raised-button (click)="drawer.toggle()" style="border: solid 1px darkblue; background-color:white">
           <mat-icon style="font-size: 25px;">keyboard_arrow_right</mat-icon>
         </button>
-      </div>
+        </div>
 
-      <form class="summary-container" >
-        <mat-form-field class="summary-content" appearance="fill">
-          <mat-label><b>Reference&nbsp;No</b></mat-label>
-          <input matInput value="000106894-11" disabled="true">
-        </mat-form-field>
+        <form class="summary-container">
+            <mat-form-field class="summary-content" appearance="fill">
+                <mat-label><b>Reference&nbsp;No</b></mat-label>
+                <input matInput value="000106894-11" disabled="true">
+            </mat-form-field>
 
-        <mat-form-field class="summary-content" appearance="fill">
-          <mat-label><b>Endorsement&nbsp;Trans&nbsp;No</b></mat-label>
-          <input matInput value="9172" disabled="true">
-        </mat-form-field>
+            <mat-form-field class="summary-content" appearance="fill">
+                <mat-label><b>Endorsement&nbsp;Trans&nbsp;No</b></mat-label>
+                <input matInput value="9172" disabled="true">
+            </mat-form-field>
 
-        <mat-form-field class="summary-content" appearance="fill">
-          <mat-label><b>Endorsement&nbsp;Type</b></mat-label>
-          <input matInput value="Reduction in Coverage/Premium" disabled="true">
-        </mat-form-field>
+            <mat-form-field class="summary-content" appearance="fill">
+                <mat-label><b>Endorsement&nbsp;Type</b></mat-label>
+                <input matInput value="Reduction in Coverage/Premium" disabled="true">
+            </mat-form-field>
 
-        <mat-form-field class="summary-content" appearance="fill">
-          <mat-label><b>Policy&nbsp;No</b></mat-label>
-          <input matInput value="GLTEST21ComAdj_CRG" disabled="true">
-        </mat-form-field>
+            <mat-form-field class="summary-content" appearance="fill">
+                <mat-label><b>Policy&nbsp;No</b></mat-label>
+                <input matInput value="GLTEST21ComAdj_CRG" disabled="true">
+            </mat-form-field>
 
-        <mat-form-field class="summary-content" appearance="fill">
-          <mat-label><b>Policy&nbsp;Trans&nbsp;No.</b></mat-label>
-          <input matInput value="48312" disabled="true">
-        </mat-form-field>
+            <mat-form-field class="summary-content" appearance="fill">
+                <mat-label><b>Policy&nbsp;Trans&nbsp;No.</b></mat-label>
+                <input matInput value="48312" disabled="true">
+            </mat-form-field>
 
-        <mat-form-field class="summary-content" appearance="fill">
-          <mat-label><b>Assured/policy&nbsp;Holder</b></mat-label>
-          <input matInput value="Spouse Name04076 and Name04077 Axx" disabled="true">
-        </mat-form-field>
+            <mat-form-field class="summary-content" appearance="fill">
+                <mat-label><b>Assured/policy&nbsp;Holder</b></mat-label>
+                <input matInput value="Spouse Name04076 and Name04077 Axx" disabled="true">
+            </mat-form-field>
 
-        <mat-form-field class="summary-content" appearance="fill">
-          <mat-label><b>Insurer/Principal</b></mat-label>
-          <input matInput value="(AIPC) ASIA INSURANCE (PHILIPPINES) CORPORATION" disabled="true">
-        </mat-form-field>
+            <mat-form-field class="summary-content" appearance="fill">
+                <mat-label><b>Insurer/Principal</b></mat-label>
+                <input matInput value="(AIPC) ASIA INSURANCE (PHILIPPINES) CORPORATION" disabled="true">
+            </mat-form-field>
 
-        <mat-form-field class="summary-content" appearance="fill">
-          <mat-label><b>Insurance&nbsp;Line/Type</b></mat-label>
-          <input matInput value="ACCIDENT - Group Personal Accident (GPA)" disabled="true">
-        </mat-form-field>
+            <mat-form-field class="summary-content" appearance="fill">
+                <mat-label><b>Insurance&nbsp;Line/Type</b></mat-label>
+                <input matInput value="ACCIDENT - Group Personal Accident (GPA)" disabled="true">
+            </mat-form-field>
 
-        <mat-form-field class="summary-content" appearance="fill">
-          <mat-label><b>Coverage&nbsp;Period</b></mat-label>
-          <input matInput value="01/01/2022-12/31/2022" disabled="true">
-        </mat-form-field>
+            <mat-form-field class="summary-content" appearance="fill">
+                <mat-label><b>Coverage&nbsp;Period</b></mat-label>
+                <input matInput value="01/01/2022-12/31/2022" disabled="true">
+            </mat-form-field>
 
-        <mat-form-field class="summary-content" appearance="fill">
-          <mat-label><b>TSI</b></mat-label>
-          <input matInput value="Php 1,000,000.00" disabled="true">
-        </mat-form-field>
+            <mat-form-field class="summary-content" appearance="fill">
+                <mat-label><b>TSI</b></mat-label>
+                <input matInput value="Php 1,000,000.00" disabled="true">
+            </mat-form-field>
 
-        <mat-form-field class="summary-content" appearance="fill">
-          <mat-label><b>Branch</b></mat-label>
-          <input matInput value="(HO) Head Office" disabled="true">
-        </mat-form-field>
+            <mat-form-field class="summary-content" appearance="fill">
+                <mat-label><b>Branch</b></mat-label>
+                <input matInput value="(HO) Head Office" disabled="true">
+            </mat-form-field>
 
-        <mat-form-field class="summary-content" appearance="fill">
-          <mat-label><b>Business&nbsp;Unit</b></mat-label>
-          <input matInput value="(EMP) Captive Individual Client" disabled="true">
-        </mat-form-field>
+            <mat-form-field class="summary-content" appearance="fill">
+                <mat-label><b>Business&nbsp;Unit</b></mat-label>
+                <input matInput value="(EMP) Captive Individual Client" disabled="true">
+            </mat-form-field>
 
-        <mat-form-field class="summary-content" appearance="fill">
-          <mat-label><b>Marketing&nbsp;AO</b></mat-label>
-          <input matInput value="(MARY ANN)Mary Ann M. Vasallo" disabled="true">
-        </mat-form-field>
+            <mat-form-field class="summary-content" appearance="fill">
+                <mat-label><b>Marketing&nbsp;AO</b></mat-label>
+                <input matInput value="(MARY ANN)Mary Ann M. Vasallo" disabled="true">
+            </mat-form-field>
 
-        <mat-form-field class="summary-content" appearance="fill">
-          <mat-label><b>Processor</b></mat-label>
-          <input matInput value="Mary Ann M. Vasallo" disabled="true">
-        </mat-form-field>
+            <mat-form-field class="summary-content" appearance="fill">
+                <mat-label><b>Processor</b></mat-label>
+                <input matInput value="Mary Ann M. Vasallo" disabled="true">
+            </mat-form-field>
 
-        <mat-form-field class="summary-content" appearance="fill">
-          <mat-label><b>Reviewer</b></mat-label>
-          <input matInput value="Sel Libunao" disabled="true">
-        </mat-form-field>
-      </form>
+            <mat-form-field class="summary-content" appearance="fill">
+                <mat-label><b>Reviewer</b></mat-label>
+                <input matInput value="Sel Libunao" disabled="true">
+            </mat-form-field>
+        </form>
     </mat-drawer>
 
-<!------------->
+    <!------------->
 
-<!--CONTENT-->
-<div class="content">
-  <button type="button" mat-raised-button (click)="drawer.toggle()" style="border: solid 1px darkblue; background-color:white">
-    <mat-icon style="font-size: 25px;">keyboard_arrow_left</mat-icon>
-  </button>
-</div>
+    <!--CONTENT-->
+    <div class="content-btn">
+        <button type="button" mat-raised-button (click)="drawer.toggle()" style="border: solid 1px darkblue; background-color:white">
+        <mat-icon style="font-size: 25px;">keyboard_arrow_left</mat-icon>
+        </button>
+    </div>
+    <!--MAIN STEPPER-->
+    <mat-stepper class="main-stepper" orientation="vertical" linear="true" #stepper>
+        <mat-step>
+            <form class>
+                <ng-template matStepLabel style="width:100%;"><b>CURRENT&nbsp;POLICY</b></ng-template>
 
-<mat-stepper orientation="vertical" linear="true" #stepper>
-  <mat-step>
-    <form class>
-      <ng-template matStepLabel style="width:100%;"><b>CURRENT&nbsp;POLICY</b></ng-template>
+                <!-------CURRENT POLICY------->
 
-      <div class="bottom-navigation">
-        <div class="bottom-divider" style="display: flex;">
-          <button mat-raised-button matStepperPrevious>BACK</button>
-          <button mat-raised-button>SAVE</button>
-          <button mat-raised-button>CLOSE</button>
-        </div>
+                <div class="vpth">
 
-        <button mat-raised-button matStepperNext>NEXT</button>
-      </div>
+                    <a>
+                        <button mat-raised-button> <mat-icon class="fas fa-table" style="color: orange; margin-right: 20px;"></mat-icon> VIEW POLICY TRANSACTION HISTORY
+                      </button>
+                    </a>
 
-    </form>
-  </mat-step>
+                </div>
 
-  <mat-step>
-    <form>
-      <ng-template matStepLabel><b>TRANSACTION</b></ng-template>
+                <!---------------------------->
 
-      <div class="bottom-navigation">
-        <div class="bottom-divider" style="display: flex;">
-          <button mat-raised-button matStepperPrevious>BACK</button>
-          <button mat-raised-button>SAVE</button>
-          <button mat-raised-button>CLOSE</button>
-        </div>
+                <div class="bottom-navigation">
+                    <div class="bottom-divider" style="display: flex;">
+                        <button mat-raised-button matStepperPrevious>BACK</button>
+                        <button mat-raised-button>SAVE</button>
+                        <button mat-raised-button>CLOSE</button>
+                    </div>
 
-        <button mat-raised-button matStepperNext>NEXT</button>
-      </div>
+                    <button mat-raised-button matStepperNext>NEXT</button>
+                </div>
 
-    </form>
-  </mat-step>
+            </form>
+        </mat-step>
+        <!-------CURRENT POLICY------->
+        <mat-step>
+            <form>
+                <ng-template matStepLabel><b>TRANSACTION</b></ng-template>
 
-  <mat-step>
-    <form>
-      <ng-template matStepLabel><b>COVERAGE&nbsp;SUMMARY</b></ng-template>
+                <mat-stepper class="transaction-stepper" orientation="vertical" #stepper>
+                    <mat-step>
+                        <ng-template matStepLabel>ENDORSEMENT&nbsp;ADDITION/REDUCTION&nbsp;IN&nbsp;COVERAGE</ng-template>
 
-      <div class="bottom-navigation">
-        <div class="bottom-divider" style="display: flex;">
-          <button mat-raised-button matStepperPrevious>BACK</button>
-          <button mat-raised-button>SAVE</button>
-          <button mat-raised-button>CLOSE</button>
-        </div>
+                        <div class="earin-container">
+                            <div style="border-bottom:solid 1px darkblue;">
+                                <form class="earin-title">
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Created By:</mat-label>
+                                        <b><input matInput value="Ms. Mary Ann M. Vasallo" disabled="true"></b>
+                                    </mat-form-field>
+                                </form>
+                                <form class="earin-title">
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Processed By:</mat-label>
+                                        <b><input matInput value="Ms. Mary Ann M. Vasallo" disabled="true"></b>
+                                    </mat-form-field>
+                                </form>
+                            </div>
+                            <div class="earin-content">
+                                <mat-form-field class="earin-body-dp" appearance="outline">
+                                    <mat-label>Inception Date</mat-label>
+                                    <input matInput [matDatepicker]="incepDate">
+                                    <mat-datepicker-toggle matSuffix [for]="incepDate"></mat-datepicker-toggle>
+                                    <mat-datepicker #incepDate></mat-datepicker>
+                                </mat-form-field><br>
 
-        <button mat-raised-button matStepperNext>NEXT</button>
-      </div>
+                                <mat-form-field class="earin-body-dp" appearance="outline">
+                                    <mat-label>Expiry Date</mat-label>
+                                    <input matInput [matDatepicker]="expDate">
+                                    <mat-datepicker-toggle matSuffix [for]="expDate"></mat-datepicker-toggle>
+                                    <mat-datepicker #expDate></mat-datepicker>
+                                </mat-form-field><br>
 
-    </form>
-  </mat-step>
+                                <mat-form-field class="earin-body-text" appearance="outline">
+                                    <mat-label>Total Sum Insured</mat-label>
+                                    <input matInput currencyMask placeholder="0.00" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
 
-  <mat-step>
-    <form>
-      <ng-template matStepLabel><b>CREDIT&nbsp;MEMO</b></ng-template>
+                                </mat-form-field>
+                            </div>
+                        </div>
 
-      <div class="bottom-navigation">
-        <div class="bottom-divider" style="display: flex;">
-          <button mat-raised-button matStepperPrevious>BACK</button>
-          <button mat-raised-button>SAVE</button>
-          <button mat-raised-button>CLOSE</button>
-        </div>
+                    </mat-step>
 
-        <button mat-raised-button matStepperNext>NEXT</button>
-      </div>
+                    <mat-step>
+                        <form>
+                            <ng-template matStepLabel>AMMEND&nbsp;GENERAL&nbsp;INFO</ng-template>
 
-    </form>
-  </mat-step>
+                        </form>
+                    </mat-step>
 
-  <mat-step>
-    <form>
-      <ng-template matStepLabel><b>REQUEST&nbsp;FOR&nbsp;DOCUMENTATION</b></ng-template>
+                    <mat-step>
+                        <form>
+                            <ng-template matStepLabel>OTHER&nbsp;CONDITIONS</ng-template>
 
-      <div class="bottom-navigation">
-        <div class="bottom-divider" style="display: flex;">
-          <button mat-raised-button matStepperPrevious>BACK</button>
-          <button mat-raised-button>SAVE</button>
-          <button mat-raised-button>CLOSE</button>
-        </div>
+                        </form>
+                    </mat-step>
+                </mat-stepper>
 
-        <button mat-raised-button matStepperNext>NEXT</button>
-      </div>
+                <div class="bottom-navigation">
+                    <div class="bottom-divider" style="display: flex;">
+                        <button mat-raised-button matStepperPrevious>BACK</button>
+                        <button mat-raised-button>SAVE</button>
+                        <button mat-raised-button>CLOSE</button>
+                    </div>
 
-    </form>
-  </mat-step>
+                    <button mat-raised-button matStepperNext>NEXT</button>
+                </div>
 
-  <mat-step>
-    <form>
-      <ng-template matStepLabel><b>ATTACHMENT</b></ng-template>
+            </form>
+        </mat-step>
+        <!---------------------------->
+        <mat-step>
+            <form>
+                <ng-template matStepLabel><b>COVERAGE&nbsp;SUMMARY</b></ng-template>
 
-      <div class="bottom-navigation">
-        <div class="bottom-divider" style="display: flex;">
-          <button mat-raised-button matStepperPrevious>BACK</button>
-          <button mat-raised-button>SAVE</button>
-          <button mat-raised-button>CLOSE</button>
-        </div>
+                <div class="bottom-navigation">
+                    <div class="bottom-divider" style="display: flex;">
+                        <button mat-raised-button matStepperPrevious>BACK</button>
+                        <button mat-raised-button>SAVE</button>
+                        <button mat-raised-button>CLOSE</button>
+                    </div>
 
-        <button mat-raised-button matStepperNext>NEXT</button>
-      </div>
+                    <button mat-raised-button matStepperNext>NEXT</button>
+                </div>
 
-    </form>
-  </mat-step>
+            </form>
+        </mat-step>
 
-  <mat-step>
-    <form>
-      <ng-template matStepLabel><b>ENDORSEMENT&nbsp;SYSTEM</b></ng-template>
+        <mat-step>
+            <form>
+                <ng-template matStepLabel><b>CREDIT&nbsp;MEMO</b></ng-template>
 
-      <div class="bottom-navigation">
-        <div class="bottom-divider" style="display: flex;">
-          <button mat-raised-button matStepperPrevious>BACK</button>
-          <button mat-raised-button>SAVE</button>
-          <button mat-raised-button>CLOSE</button>
-        </div>
+                <div class="bottom-navigation">
+                    <div class="bottom-divider" style="display: flex;">
+                        <button mat-raised-button matStepperPrevious>BACK</button>
+                        <button mat-raised-button>SAVE</button>
+                        <button mat-raised-button>CLOSE</button>
+                    </div>
 
-        <button mat-raised-button matStepperNext>NEXT</button>
-      </div>
+                    <button mat-raised-button matStepperNext>NEXT</button>
+                </div>
 
-    </form>
-  </mat-step>
-</mat-stepper>
+            </form>
+        </mat-step>
 
+        <mat-step>
+            <form>
+                <ng-template matStepLabel><b>REQUEST&nbsp;FOR&nbsp;DOCUMENTATION</b></ng-template>
+
+                <div class="bottom-navigation">
+                    <div class="bottom-divider" style="display: flex;">
+                        <button mat-raised-button matStepperPrevious>BACK</button>
+                        <button mat-raised-button>SAVE</button>
+                        <button mat-raised-button>CLOSE</button>
+                    </div>
+
+                    <button mat-raised-button matStepperNext>NEXT</button>
+                </div>
+
+            </form>
+        </mat-step>
+
+        <mat-step>
+            <form>
+                <ng-template matStepLabel><b>ATTACHMENT</b></ng-template>
+
+                <div class="bottom-navigation">
+                    <div class="bottom-divider" style="display: flex;">
+                        <button mat-raised-button matStepperPrevious>BACK</button>
+                        <button mat-raised-button>SAVE</button>
+                        <button mat-raised-button>CLOSE</button>
+                    </div>
+
+                    <button mat-raised-button matStepperNext>NEXT</button>
+                </div>
+
+            </form>
+        </mat-step>
+
+        <mat-step>
+            <form>
+                <ng-template matStepLabel><b>ENDORSEMENT&nbsp;SYSTEM</b></ng-template>
+
+                <div class="bottom-navigation">
+                    <div class="bottom-divider" style="display: flex;">
+                        <button mat-raised-button matStepperPrevious>BACK</button>
+                        <button mat-raised-button>SAVE</button>
+                        <button mat-raised-button>CLOSE</button>
+                    </div>
+
+                    <button mat-raised-button matStepperNext>NEXT</button>
+                </div>
+
+            </form>
+        </mat-step>
+    </mat-stepper>
+    <!------------->
 </mat-drawer-container>
 <!------------->
 

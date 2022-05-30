@@ -1,163 +1,216 @@
-:host{
-  font-family: 'Poppins', sans-serif; 
+:host {
+    font-family: 'Poppins', sans-serif;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+::ng-deep .mat-form-field {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+}
+
+
 /*------------------------------------------------------*/
+
+
 /*-----------------BANNER-------------------------------*/
-/*------------------------------------------------------*/
-.parent-header{
-  position: fixed;
-  z-index: 10;
-  width: 100%;
-}
 
-.main-banner{
-  height: 50px;
-  background-color: rgb(31,56,98);
-  color: white;
-  padding: 0px 10px;
-  display: flex;
-
-  align-items: center;
-  justify-content: space-between;
-}
-.banner-container{
-  display: flex;
-  justify-content: space-between;
-  max-width: 100%;
-  width: 100%;
-  padding: 0%;
-  margin: 0%;
-  height: auto;
-
-}
-.img-container{
-  display: flex;
-  align-items: center;
-}
-
-.img-container img{
-  height: 30px;
-  object-fit: cover;
-}
-
-.banner-name{
-  display: flex;
-  align-items: center;
-}
 
 /*------------------------------------------------------*/
+
+.parent-header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+}
+
+.main-banner {
+    height: 50px;
+    background-color: rgb(31, 56, 98);
+    color: white;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    height: auto;
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+}
+
+.img-container img {
+    height: 30px;
+    object-fit: cover;
+}
+
+.banner-name {
+    display: flex;
+    align-items: center;
+}
+
+
 /*------------------------------------------------------*/
+
+
+/*------------------------------------------------------*/
+
+
 /*------------------------------------------------------*/
 
 
 /*-------------------------------------------------------*/
+
+
 /*-----------------BREADCRUMB----------------------------*/
+
+
 /*-------------------------------------------------------*/
 
-.breadcrumb-container{
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 20px;
-  background-color: #fafafa;
+.breadcrumb-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    background-color: #fafafa;
 }
 
-.breadcrumb{
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  width: 100%;
-  padding: 5px 0px;
-  list-style: none;
-  background-color: #fafafa;
-  margin: 0px 20px;
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    width: 100%;
+    padding: 5px 0px;
+    list-style: none;
+    background-color: #fafafa;
+    margin: 0px 20px;
 }
 
-.breadcrumb a{
-  color: black;
-  text-decoration: none;
-  padding: 3px;
+.breadcrumb a {
+    color: black;
+    text-decoration: none;
+    padding: 3px;
 }
 
-.breadcrumb a:hover{
-  border-radius: 5px;
+.breadcrumb a:hover {
+    border-radius: 5px;
 }
 
 ul.breadcrumb li+li:before {
-  padding: 8px;
-  color: black;
-  content: ">";
+    padding: 8px;
+    color: black;
+    content: ">";
 }
 
-.event-logs-btn{
-  cursor: pointer;
-  border: none;
-  text-transform: uppercase;
-  background-color: rgb(143, 188, 143);
+.event-logs-btn {
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    background-color: rgb(143, 188, 143);
 }
-/*------------------------------------------------------*/
-/*------------------------------------------------------*/
-/*------------------------------------------------------*/
+
 
 /*------------------------------------------------------*/
+
+
+/*------------------------------------------------------*/
+
+
+/*------------------------------------------------------*/
+
+
+/*------------------------------------------------------*/
+
+
 /*-----------------TITLE ENDORSEMENT--------------------*/
+
+
 /*------------------------------------------------------*/
 
-.title-endorsement{
-  background-color: rgb(31,56,98);
-  color: white;
-  font-size: 12px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 40% 0 25vh;
+.title-endorsement {
+    background-color: rgb(31, 56, 98);
+    color: white;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40% 0 25vh;
 }
-/*------------------------------------------------------*/
-/*------------------------------------------------------*/
-/*------------------------------------------------------*/
+
 
 /*------------------------------------------------------*/
-/*-----------------SIDE NAV AND CONTENT-----------------*/
+
+
 /*------------------------------------------------------*/
+
+
+/*------------------------------------------------------*/
+
+
+/*------------------------------------------------------*/
+
+
+/*-----------------SIDE NAV AND CONTENT-----------------*/
+
+
+/*------------------------------------------------------*/
+
 
 /* SIDE NAV*/
+
 .main-container {
-  top: 12vh;
-  background-color: white;
-  height: 83vh;
+    top: 12%;
+    background-color: white;
+    height: 83vh;
+    position: relative;
 }
 
-.content{
-  display: flex;
-  justify-content: flex-end;
+.content-btn {
+    display: flex;
+    justify-content: flex-end;
 }
 
-.sidenav{
-  padding: 10px;
-  background-color: lightgray;
-  width: 15%;
-  font-size: 11px;
+.sidenav {
+    padding: 10px;
+    background-color: lightgray;
+    width: 15%;
+    font-size: 11px;
 }
+
+
 /* SIDE NAV CONTAINER*/
-::ng-deep .summary-content.mat-form-field-appearance-fill.mat-form-field-disabled .mat-form-field-flex{
-  background-color: lightgray;
+
+::ng-deep .summary-content.mat-form-field-appearance-fill.mat-form-field-disabled .mat-form-field-flex {
+    background-color: lightgray;
 }
 
-.summary-container{
-  font-size: 11px;
+.summary-container {
+    font-size: 11px;
 }
 
-::ng-deep .summary-content{
-  font-family: 'Poppins', sans-serif;
-  font-size: 11px;
+::ng-deep .summary-content {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
 }
 
 ::ng-deep .mat-form-field-wrapper {
-  padding: 0px;
+    padding: 0px;
 }
 
-::ng-deep .mat-drawer{
-  border-radius: 2px;
+::ng-deep .mat-drawer {
+    border-radius: 2px;
 }
+
 
 /*----------------*/
 
@@ -165,46 +218,132 @@ ul.breadcrumb li+li:before {
 /*CONTENT(STEPPER)*/
 
 .mat-stepper-vertical {
-  margin:0;
+    margin: 0;
 }
 
-::ng-deep.mat-vertical-stepper-header{
-  padding: 12.5px 150px
+::ng-deep .mat-vertical-stepper-header {
+    padding: 12.5px 150px;
+    font-family: 'Poppins', sans-serif;
 }
 
-::ng-deep .mat-step-icon.mat-step-icon-state-number.mat-step-icon-selected{
-  background-color: orangered;
+::ng-deep .mat-step-icon.mat-step-icon-state-number.mat-step-icon-selected {
+    background-color: orangered;
 }
 
-::ng-deep .mat-step-icon.mat-step-icon-state-edit{
-  background-color: orangered;
+::ng-deep .mat-step-icon.mat-step-icon-state-edit {
+    background-color: orangered;
 }
 
-::ng-deep .mat-step-text-label.ng-star-inserted{
-  margin-left: 100px;
-  width: 100vw;
-  border-bottom: solid 2px darkblue;
+::ng-deep .main-stepper .mat-step-text-label.ng-star-inserted {
+    margin-left: 100px;
+    width: 100vw;
+    border-bottom: solid 2px darkblue;
+}
+
+.bottom-navigation {
+    width: 98%;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bottom-navigation button {
+    margin: 0 2px;
+}
+
+::ng-deep .mat-button-wrapper {
+    font-family: 'Poppins', sans-serif;
 }
 
 
-.bottom-navigation{
-  width: 98%;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  background-color: #fafafa;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 15px;
-  font-family: 'Poppins', sans-serif;
+/*-----------------------*/
+
+
+/*----CURRENT POLICY-----*/
+
+.vpth {
+    margin-left: 230px;
 }
 
-.bottom-navigation button{
-  margin: 0 2px;
+.vpth button {
+    background-color: rgb(31, 56, 98);
+    color: white;
+    text-decoration: underline;
 }
-::ng-deep .mat-button-wrapper{
-  font-family: 'Poppins', sans-serif;
+
+
+/*-----------------------*/
+
+
+/*----TRANSACTION--------*/
+
+::ng-deep .transaction-stepper .mat-step-text-label.ng-star-inserted {
+    width: 100vw;
+    background-color: darkblue;
+    margin: 0;
+    color: white;
+    padding: 0 5px;
 }
+
+::ng-deep .transaction-stepper .mat-vertical-stepper-header {
+    padding: 12.5px 125px 12.5px 350px;
+}
+
+.earin-container {
+    margin: 0 100px 20px 290px;
+    padding: 0 150px;
+}
+
+.earin-title {
+    display: flex;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+}
+
+::ng-deep .earin-title .mat-form-field-wrapper {
+    padding: 0px;
+    width: 100%;
+}
+
+::ng-deep .earin-title .mat-form-field-appearance-fill.mat-form-field-disabled .mat-form-field-flex {
+    background-color: #fff;
+    padding: 0 80px;
+}
+
+::ng-deep .earin-body-dp .mat-form-field-wrapper {
+    max-height: 50px;
+    width: 40%;
+    font-size: 13px;
+    padding: 0 80px;
+}
+
+::ng-deep .earin-body-text .mat-form-field-wrapper {
+    max-height: 50px;
+    width: 50%;
+    font-size: 13px;
+    padding: 0 80px;
+}
+
+
+/*-----------------------*/
+
+
+/*----COVERAGE SUMMARY-----*/
+
+
+/*-----------------------*/
+
+
 /*------------------------------------------------------*/
+
+
 /*------------------------------------------------------*/
+
+
 /*------------------------------------------------------*/

@@ -18,6 +18,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import { NgxCurrencyModule } from "ngx-currency";
 
 
 @NgModule({
@@ -42,7 +45,10 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatPaginatorModule,
     MatSortModule,
     MatSidenavModule,
-    MatStepperModule
+    MatStepperModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    NgxCurrencyModule
   ],
   providers: [],
   bootstrap: [AppComponent]
