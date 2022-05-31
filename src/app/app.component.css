@@ -11,6 +11,18 @@ body {
     width: 100%;
 }
 
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 10px 0 5px 0;
+}
+
+::ng-deep .mat-form-field-wrapper {
+    padding: 0px;
+}
+
+::ng-deep textarea.mat-input-element {
+    height: 50px;
+}
+
 
 /*------------------------------------------------------*/
 
@@ -20,13 +32,13 @@ body {
 
 /*------------------------------------------------------*/
 
-.parent-header {
+.endorseHeader {
     position: fixed;
     z-index: 10;
     width: 100%;
 }
 
-.main-banner {
+.endorseBanner {
     height: 50px;
     background-color: rgb(31, 56, 98);
     color: white;
@@ -36,7 +48,7 @@ body {
     justify-content: space-between;
 }
 
-.banner-container {
+.endorseBannerContainer {
     display: flex;
     justify-content: space-between;
     max-width: 100%;
@@ -46,17 +58,17 @@ body {
     height: auto;
 }
 
-.img-container {
+.endorseImgContainer {
     display: flex;
     align-items: center;
 }
 
-.img-container img {
+.endorseImgContainer img {
     height: 30px;
     object-fit: cover;
 }
 
-.banner-name {
+.endorseUserAcc {
     display: flex;
     align-items: center;
 }
@@ -79,14 +91,14 @@ body {
 
 /*-------------------------------------------------------*/
 
-.breadcrumb-container {
+.endorseBreadcrumbContainer {
     display: flex;
     justify-content: space-between;
     padding: 5px 20px;
     background-color: #fafafa;
 }
 
-.breadcrumb {
+.endorseBreadcrumb {
     display: flex;
     align-items: center;
     font-size: 14px;
@@ -97,23 +109,23 @@ body {
     margin: 0px 20px;
 }
 
-.breadcrumb a {
+.endorseBreadcrumb a {
     color: black;
     text-decoration: none;
     padding: 3px;
 }
 
-.breadcrumb a:hover {
+.endorseBreadcrumb a:hover {
     border-radius: 5px;
 }
 
-ul.breadcrumb li+li:before {
+ul.endorseBreadcrumb li+li:before {
     padding: 8px;
     color: black;
     content: ">";
 }
 
-.event-logs-btn {
+.endorseBtnEventLogs {
     cursor: pointer;
     border: none;
     text-transform: uppercase;
@@ -138,7 +150,7 @@ ul.breadcrumb li+li:before {
 
 /*------------------------------------------------------*/
 
-.title-endorsement {
+.endorseScreenTitle {
     background-color: rgb(31, 56, 98);
     color: white;
     font-size: 12px;
@@ -168,19 +180,19 @@ ul.breadcrumb li+li:before {
 
 /* SIDE NAV*/
 
-.main-container {
+.endorseStepperContainer {
     top: 12%;
     background-color: white;
     height: 83vh;
     position: relative;
 }
 
-.content-btn {
+.endorseBtnSideNav {
     display: flex;
     justify-content: flex-end;
 }
 
-.sidenav {
+.endorseSidenav {
     padding: 10px;
     background-color: lightgray;
     width: 15%;
@@ -190,21 +202,17 @@ ul.breadcrumb li+li:before {
 
 /* SIDE NAV CONTAINER*/
 
-::ng-deep .summary-content.mat-form-field-appearance-fill.mat-form-field-disabled .mat-form-field-flex {
+::ng-deep .endorseSummaryContent.mat-form-field-appearance-fill.mat-form-field-disabled .mat-form-field-flex {
     background-color: lightgray;
 }
 
-.summary-container {
+.endorseSummaryContainer {
     font-size: 11px;
 }
 
-::ng-deep .summary-content {
+::ng-deep .endorseSummaryContent {
     font-family: 'Poppins', sans-serif;
     font-size: 11px;
-}
-
-::ng-deep .mat-form-field-wrapper {
-    padding: 0px;
 }
 
 ::ng-deep .mat-drawer {
@@ -234,13 +242,13 @@ ul.breadcrumb li+li:before {
     background-color: orangered;
 }
 
-::ng-deep .main-stepper .mat-step-text-label.ng-star-inserted {
+::ng-deep .endorseStepper .mat-step-text-label.ng-star-inserted {
     margin-left: 100px;
     width: 100vw;
     border-bottom: solid 2px darkblue;
 }
 
-.bottom-navigation {
+.endorseStepperBtnNavigation {
     width: 98%;
     bottom: 0;
     left: 0;
@@ -252,7 +260,7 @@ ul.breadcrumb li+li:before {
     font-family: 'Poppins', sans-serif;
 }
 
-.bottom-navigation button {
+.endorseStepperBtnNavigation button {
     margin: 0 2px;
 }
 
@@ -266,11 +274,11 @@ ul.breadcrumb li+li:before {
 
 /*----CURRENT POLICY-----*/
 
-.vpth {
+.endorseStepperCurrPolicyContent {
     margin-left: 230px;
 }
 
-.vpth button {
+.endorseStepperCurrPolicyContent button {
     background-color: rgb(31, 56, 98);
     color: white;
     text-decoration: underline;
@@ -294,9 +302,17 @@ ul.breadcrumb li+li:before {
     padding: 12.5px 125px 12.5px 350px;
 }
 
+::ng-deep .transaction-stepper .mat-vertical-content {
+    padding-bottom: 0px;
+}
+
 .earin-container {
     margin: 0 100px 20px 290px;
     padding: 0 150px;
+}
+
+.earin-content {
+    height: auto;
 }
 
 .earin-title {
@@ -326,6 +342,13 @@ ul.breadcrumb li+li:before {
 ::ng-deep .earin-body-text .mat-form-field-wrapper {
     max-height: 50px;
     width: 50%;
+    font-size: 13px;
+    padding: 0 80px;
+}
+
+::ng-deep .earin-body-textarea .mat-form-field-wrapper {
+    max-height: 50px;
+    width: 70%;
     font-size: 13px;
     padding: 0 80px;
 }
