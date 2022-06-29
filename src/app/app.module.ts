@@ -21,6 +21,9 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { NgxCurrencyModule } from "ngx-currency";
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 @NgModule({
@@ -48,7 +51,10 @@ import { NgxCurrencyModule } from "ngx-currency";
     MatStepperModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    NgxCurrencyModule
+    NgxCurrencyModule,
+    MatExpansionModule,
+    MatCheckboxModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,6 +6,14 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+span {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
 ::ng-deep .mat-form-field {
     font-family: 'Poppins', sans-serif;
     width: 100%;
@@ -21,6 +29,62 @@ body {
 
 ::ng-deep textarea.mat-input-element {
     height: 50px;
+}
+
+::ng-deep .mat-accordion {
+    font-family: 'Poppins', sans-serif;
+}
+
+::ng-deep .mat-expansion-panel-body {
+    padding: 0 24px 0px !important;
+}
+
+::ng-deep .mat-input-element:disabled {
+    color: black
+}
+
+::ng-deep .mat-form-field-appearance-fill.mat-form-field-disabled .mat-form-field-label {
+    color: black;
+}
+
+::ng-deep.mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-label {
+    color: black;
+}
+
+::ng-deep .mat-form-field-label {
+    color: black;
+}
+
+.mat-table {
+    font-family: 'Poppins', sans-serif;
+}
+
+th {
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    font-size: 13px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+td.mat-cell {
+    padding: 0 20px;
+}
+
+th.mat-header-cell {
+    font-weight: 1000;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+tr.mat-header-row {
+    height: 40px;
+    padding: 0 10px;
+}
+
+tr.mat-row {
+    height: 33px;
+    padding: 0 10px;
 }
 
 
@@ -151,12 +215,22 @@ ul.endorseBreadcrumb li+li:before {
 /*------------------------------------------------------*/
 
 .endorseScreenTitle {
-    background-color: rgb(31, 56, 98);
-    color: white;
-    font-size: 12px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0px 40% 0 25vh;
+    border-top: solid 1px darkblue;
+    border-bottom: solid 1px darkblue;
+    font-weight: bold;
+    background-color: white;
+}
+
+.endorseScreenTitleTransacID {
+    font-size: 12px;
+    padding: 2px 5px;
+    color: white;
+    background-color: royalblue;
+    border-radius: 4px;
 }
 
 
@@ -181,7 +255,7 @@ ul.endorseBreadcrumb li+li:before {
 /* SIDE NAV*/
 
 .endorseStepperContainer {
-    top: 12%;
+    top: 13%;
     background-color: white;
     height: 83vh;
     position: relative;
@@ -230,8 +304,9 @@ ul.endorseBreadcrumb li+li:before {
 }
 
 ::ng-deep .mat-vertical-stepper-header {
-    padding: 12.5px 150px;
+    padding: 0 150px;
     font-family: 'Poppins', sans-serif;
+    height: 50px !important;
 }
 
 ::ng-deep .mat-step-icon.mat-step-icon-state-number.mat-step-icon-selected {
@@ -243,9 +318,9 @@ ul.endorseBreadcrumb li+li:before {
 }
 
 ::ng-deep .endorseStepper .mat-step-text-label.ng-star-inserted {
-    margin-left: 100px;
+    margin-left: 20px;
     width: 100vw;
-    border-bottom: solid 2px darkblue;
+    font-size: 16px;
 }
 
 .endorseStepperBtnNavigation {
@@ -268,6 +343,14 @@ ul.endorseBreadcrumb li+li:before {
     font-family: 'Poppins', sans-serif;
 }
 
+::ng-deep .mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}
+
+::ng-deep .endorseStepperCurrPolicyContent .mat-raised-button:not([class*=mat-elevation-z]) {
+    box-shadow: 0px 3px 1px -2px rgba(89, 87, 87, 0.2), 0px 2px 2px 0px rgba(75, 73, 73, 0.14), 0px 1px 5px 0px rgba(93, 92, 92, 0.12);
+}
+
 
 /*-----------------------*/
 
@@ -275,13 +358,7 @@ ul.endorseBreadcrumb li+li:before {
 /*----CURRENT POLICY-----*/
 
 .endorseStepperCurrPolicyContent {
-    margin-left: 230px;
-}
-
-.endorseStepperCurrPolicyContent button {
-    background-color: rgb(31, 56, 98);
-    color: white;
-    text-decoration: underline;
+    margin-left: 150px;
 }
 
 
@@ -290,67 +367,137 @@ ul.endorseBreadcrumb li+li:before {
 
 /*----TRANSACTION--------*/
 
-::ng-deep .transaction-stepper .mat-step-text-label.ng-star-inserted {
-    width: 100vw;
-    background-color: darkblue;
-    margin: 0;
-    color: white;
-    padding: 0 5px;
+.mat-expansion-panel-header {
+    height: 35px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
 }
 
-::ng-deep .transaction-stepper .mat-vertical-stepper-header {
-    padding: 12.5px 125px 12.5px 350px;
+::ng-deep .mat-expansion-panel-content {
+    font-family: 'Poppins', sans-serif;
 }
 
-::ng-deep .transaction-stepper .mat-vertical-content {
-    padding-bottom: 0px;
-}
-
-.earin-container {
-    margin: 0 100px 20px 290px;
+.endorseTransacExpanPanelContainer {
+    margin: 0 10px 0px 20px;
     padding: 0 150px;
 }
 
-.earin-content {
-    height: auto;
-}
 
-.earin-title {
+/*--1st EXPANSION PANEL----*/
+
+
+/*.endorseTransac1stExPanelContentTitle {
     display: flex;
-    font-size: 12px;
+    font-size: 13px;
     font-family: 'Poppins', sans-serif;
+    margin: 10px 20px;
+    border: solid 1px lightgray;
+    border-radius: 4px;
+    padding: 3px 15px 15px 15px;
+}*/
+
+.endorseTransac1stExPanelContent {
+    display: flex;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px 50px;
     width: 100%;
+    border: solid 1px lightskyblue;
+    border-radius: 4px;
+    padding: 5px 10px 20px 10px;
 }
 
-::ng-deep .earin-title .mat-form-field-wrapper {
+::ng-deep .endorseTransac1stPanelTxtAreaDisp .mat-form-field-wrapper {
+    height: 50px;
+    font-size: 13px;
+}
+
+::ng-deep .endorseTransac1stExPanelTitle .mat-form-field-wrapper {
     padding: 0px;
-    width: 100%;
 }
 
-::ng-deep .earin-title .mat-form-field-appearance-fill.mat-form-field-disabled .mat-form-field-flex {
-    background-color: #fff;
-    padding: 0 80px;
+::ng-deep .endorseTransac1stExPanelContentTitleDisp.mat-form-field-appearance-fill.mat-form-field-disabled .mat-form-field-flex {
+    background-color: white !important;
+    position: relative;
 }
 
-::ng-deep .earin-body-dp .mat-form-field-wrapper {
-    max-height: 50px;
-    width: 40%;
-    font-size: 13px;
-    padding: 0 80px;
-}
-
-::ng-deep .earin-body-text .mat-form-field-wrapper {
-    max-height: 50px;
-    width: 50%;
-    font-size: 13px;
-    padding: 0 80px;
-}
-
-::ng-deep .earin-body-textarea .mat-form-field-wrapper {
+::ng-deep .endorseTransac1stExPanelDatePicker .mat-form-field-wrapper {
     max-height: 50px;
     width: 70%;
     font-size: 13px;
-    padding: 0 80px;
+}
+
+::ng-deep .endorseTransac1stPanelFldTotalSumInsured .mat-form-field-wrapper {
+    max-height: 50px;
+    width: 80%;
+    font-size: 13px;
+}
+
+::ng-deep .endorseTransac1stPanelTxtArea .mat-form-field-wrapper {
+    max-height: 50px;
+    font-size: 13px;
+    width: 100%;
+}
+
+
+/*-----------------------------*/
+
+
+/*---2nd Expansion Panel & 3rd Expansion Panel----*/
+
+.endorseTransac2ndExPanelContainer,
+.endorseTransac3rdExPanelContainer {
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px 80px;
+}
+
+.endorseTransac2ndExPanelTitle,
+.endorseTransac3rdExPanelTitle {
+    display: flex;
+    justify-content: space-around;
+}
+
+.endorseTransac2ndExPanelTitle p,
+.endorseTransac3rdExPanelTitle p {
+    padding: 0 10px;
+}
+
+.endorseTransac2ndExPanelContent,
+.endorseTransac3rdExPanelContent {
+    display: flex;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    margin: 5px;
+    border: solid 1px lightskyblue;
+    border-radius: 4px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.endorseTransac2ndExPanelSearch {
+    width: 90%;
+}
+
+.endorseTransac2ndExPanelDatePicker {
+    width: 70%;
+}
+
+.endorseTransacListbtn {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.endorseTransacListbtn:hover {
+    background-color: rgb(241, 238, 238);
+}
+
+.endorseTransac2ndExPanelTxtArea,
+.endorseTransac3rdExPanelTxtArea {
+    max-height: 50px;
+    font-size: 13px;
+    width: 100%;
 }
 
 
@@ -359,8 +506,73 @@ ul.endorseBreadcrumb li+li:before {
 
 /*----COVERAGE SUMMARY-----*/
 
+.endorseCoverageSummaryDisplay {
+    font-size: 13px;
+}
+
+::ng-deep .endorseCoverageSummaryDisplay.mat-form-field-appearance-fill .mat-form-field-flex {
+    padding: 0px !important;
+}
+
+.endorseCoverageSummaryTableContainer {
+    margin: 0px 110px;
+}
+
 
 /*-----------------------*/
+
+
+/*-----------------CREDIT MEMO---------------------------*/
+
+.endorseCreditMemoExpanPanelContainer {
+    margin: 0 10px 0px 20px;
+    padding: 0 150px;
+}
+
+.endorseCreditMemo1stExPanelContent {
+    display: flex;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px 50px;
+    width: 100%;
+    border: solid 1px lightskyblue;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+
+.endorseCreditMemo1stExPanelLeftADatePicker {
+    width: 70%;
+}
+
+.endorseCreditMemo1stExPanelLeftA {
+    width: 90%;
+}
+
+.endorseCreditMemo1stExPanelLeftATextArea {
+    width: 100%;
+}
+
+.endorseCreditMemo1stExPanelLeftB,
+.endorseCreditMemo1stExPanelRightB,
+.endorseCreditMemo1stExPanelLeftC {
+    width: 80%;
+}
+
+.ChkBoxADA {
+    display: flex;
+    align-items: center;
+}
+
+.endorseCreditMemo1stExPanelRightA {
+    width: 40%;
+}
+
+::ng-deep .endorseCreditMemo1stExPanelLeftC .mat-input-element:disabled {
+    color: black;
+}
+
+
+/*-------------------------------------------------------*/
 
 
 /*------------------------------------------------------*/

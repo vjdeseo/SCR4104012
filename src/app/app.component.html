@@ -43,8 +43,8 @@
     </div>
 
     <div class="endorseScreenTitle">
-        <span>Transaction&nbsp;No.&nbsp;9172</span>
-        <span>ENDORSEMENTS</span>
+        <span class="endorseScreenTitleTransacID">Transaction&nbsp;No.&nbsp;9172</span>
+        <span style="font-size: 18px;">ENDORSEMENTS</span>
     </div>
 
 </div>
@@ -153,16 +153,405 @@
     </div>
     <!--MAIN STEPPER-->
     <mat-stepper class="endorseStepper" orientation="vertical" linear="true" #stepper>
+
+        <!--TRANSACTION-->
+        <mat-step>
+            <form>
+                <ng-template matStepLabel>TRANSACTION</ng-template>
+
+                <div class="endorseTransacExpanPanelContainer">
+                    <mat-accordion>
+                        <mat-expansion-panel [expanded]="stepTransac === 0" (opened)="setStepTransac(0)">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Endorsement Addition/Reduction in Coverage
+                                </mat-panel-title>
+                                <mat-panel-description>
+
+                                </mat-panel-description>
+                            </mat-expansion-panel-header>
+
+                            <div style="border-top: solid 1px black; display: flex; padding: 0 30px;">
+                                <div class="endorseTransac1stExPanelContent">
+                                    <form style="width: 100%;">
+                                        <mat-form-field class="endorseTransac1stExPanelContentTitleDisp" appearance="fill">
+                                            <mat-label>Created By:</mat-label>
+                                            <b><input matInput value="Ms. Mary Ann M. Vasallo" disabled="true"></b>
+                                        </mat-form-field>
+
+                                        <mat-form-field class="endorseTransac1stExPanelContentTitleDisp" appearance="fill">
+                                            <mat-label>Processed By:</mat-label>
+                                            <b><input matInput value="Ms. Mary Ann M. Vasallo" disabled="true"></b>
+                                        </mat-form-field>
+
+                                        <mat-form-field class="endorseTransac1stExPanelDatePicker" appearance="outline">
+                                            <mat-label style="color:black">Inception Date</mat-label>
+                                            <input matInput [matDatepicker]="IncepDate">
+                                            <mat-datepicker-toggle matSuffix [for]="IncepDate"></mat-datepicker-toggle>
+                                            <mat-datepicker #IncepDate></mat-datepicker>
+                                        </mat-form-field>
+
+                                        <mat-form-field class="endorseTransac1stExPanelDatePicker" appearance="outline">
+                                            <mat-label style="color:black">Expiry Date</mat-label>
+                                            <input matInput [matDatepicker]="ExpDate">
+                                            <mat-datepicker-toggle matSuffix [for]="ExpDate"></mat-datepicker-toggle>
+                                            <mat-datepicker #ExpDate></mat-datepicker>
+                                        </mat-form-field>
+
+                                        <mat-form-field class="endorseTransac1stPanelFldTotalSumInsured" appearance="outline">
+                                            <mat-label style="color:black">Total&nbsp;Sum&nbsp;Insured</mat-label>
+                                            <div style="display: flex; align-items:center; justify-content:space-between">
+                                                <span mat-prefix>PHP</span>
+                                                <input matInput currencyMask placeholder="0.00" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                            </div>
+                                        </mat-form-field>
+
+                                    </form>
+
+                                    <form style="width: 100%;">
+
+                                        <mat-form-field class="endorseTransac1stPanelTxtArea" appearance="outline">
+                                            <mat-label style="color:black">Description of Risk</mat-label>
+                                            <textarea matInput placeholder="Enter Description of Risk ..."></textarea>
+                                        </mat-form-field>
+
+                                        <mat-form-field class="endorseTransac1stPanelTxtArea" style="padding-top: 10px;" appearance="outline">
+                                            <mat-label style="color:black">Location of Risk</mat-label>
+                                            <textarea matInput placeholder="Enter Location of Risk..."></textarea>
+                                        </mat-form-field>
+
+                                        <mat-form-field class="endorseTransac1stPanelTxtAreaDisp" style="padding-top: 10px;" appearance="fill">
+                                            <mat-label>Internal Remarks</mat-label>
+                                            <textarea matInput placeholder="Enter Internal Remarks..." disabled="true">Reduction in coverage premium</textarea>
+                                        </mat-form-field>
+                                    </form>
+                                </div>
+                            </div>
+
+
+
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel [expanded]="stepTransac === 1" (opened)="setStepTransac(1)" (opened)="endorseTransacExpansionPanel = true" (closed)="endorseTransacExpansionPanel = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Ammend General Info
+                                </mat-panel-title>
+                                <mat-panel-description>
+
+                                </mat-panel-description>
+                            </mat-expansion-panel-header>
+
+                            <div style="border-top: solid 1px black; padding: 0 30px; width: 100%;">
+                                <div class="endorseTransac2ndExPanelContainer">
+                                    <div class="endorseTransac2ndExPanelTitle">
+                                        <p>Original Policy Information</p>
+
+                                        <p>Ammendments</p>
+                                    </div>
+
+
+                                    <div style="display: flex; ">
+                                        <div class="endorseTransac2ndExPanelContent">
+                                            <form>
+                                                <mat-form-field class="endorseTransac2ndExPanelSearch" appearance="outline">
+                                                    <mat-label>Client</mat-label>
+                                                    <input matInput value=" " disabled="true">
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelDisabledFld" appearance="outline">
+                                                    <mat-label>Policy Holder</mat-label>
+                                                    <textarea matInput placeholder="Enter Policy Holder..." disabled="true"></textarea>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelDisabledFld" appearance="outline">
+                                                    <mat-label>Description Of Risk</mat-label>
+                                                    <textarea matInput placeholder="Enter Description of Risk..." disabled="true"></textarea>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelDisabledFld" appearance="outline">
+                                                    <mat-label>Location of Risk</mat-label>
+                                                    <textarea matInput placeholder="Enter Location of Risk..." disabled="true"></textarea>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelDatePicker" appearance="outline">
+                                                    <mat-label>Inception Date</mat-label>
+                                                    <input matInput value=" " disabled="true">
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelDatePicker" appearance="outline">
+                                                    <mat-label>Expiry Date</mat-label>
+                                                    <input matInput value=" " disabled="true">
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelTSI" appearance="outline">
+                                                    <mat-label>Total&nbsp;Sum&nbsp;Insured</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <span mat-prefix>PHP</span>
+                                                        <input matInput currencyMask disabled="true" placeholder="0.00" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+                                            </form>
+                                        </div>
+
+                                        <div class="endorseTransac2ndExPanelContent">
+                                            <form>
+                                                <mat-form-field class="endorseTransac2ndExPanelSearch" appearance="outline">
+                                                    <mat-label>Client</mat-label>
+                                                    <input matInput value=" ">
+                                                    <button class="endorseTransacListbtn" matSuffix><mat-icon>view_list</mat-icon></button>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelDisabledFld" appearance="outline">
+                                                    <mat-label>Policy Holder</mat-label>
+                                                    <textarea matInput placeholder="Enter Policy Holder..."></textarea>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelDisabledFld" appearance="outline">
+                                                    <mat-label>Description Of Risk</mat-label>
+                                                    <textarea matInput placeholder="Enter Description of Risk..."></textarea>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelDisabledFld" appearance="outline">
+                                                    <mat-label>Location of Risk</mat-label>
+                                                    <textarea matInput placeholder="Enter Location of Risk..."></textarea>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelDatePicker" appearance="outline">
+                                                    <mat-label>Inception Date</mat-label>
+                                                    <input matInput [matDatepicker]="secondEpIncepDate">
+                                                    <mat-datepicker-toggle matSuffix [for]="secondEpIncepDate"></mat-datepicker-toggle>
+                                                    <mat-datepicker #secondEpIncepDate></mat-datepicker>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelDatePicker" appearance="outline">
+                                                    <mat-label>Expiry Date</mat-label>
+                                                    <input matInput [matDatepicker]="SecondEpExpDate">
+                                                    <mat-datepicker-toggle matSuffix [for]="SecondEpExpDate"></mat-datepicker-toggle>
+                                                    <mat-datepicker #SecondEpExpDate></mat-datepicker>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelSearch" appearance="outline">
+                                                    <mat-label>Total&nbsp;Sum&nbsp;Insured</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <span mat-prefix>PHP</span>
+                                                        <input matInput currencyMask placeholder="0.00" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <div style="display: flex; width: 100%;">
+                                        <div class="endorseTransac2ndExPanelContent">
+                                            <form style="width:100%">
+                                                <mat-form-field class="endorseTransac2ndExPanelSearch" appearance="outline">
+                                                    <mat-label>Marketing AO</mat-label>
+                                                    <input matInput value=" " disabled="true">
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelTextArea" appearance="outline">
+                                                    <mat-label>Profit Center</mat-label>
+                                                    <textarea matInput placeholder="Enter Policy Holder..." disabled="true"></textarea>
+                                                </mat-form-field>
+
+                                            </form>
+                                        </div>
+
+                                        <div class="endorseTransac2ndExPanelContent">
+                                            <form style="width:100%">
+                                                <mat-form-field class="endorseTransac2ndExPanelSearch" appearance="outline">
+                                                    <mat-label>Marketing AO</mat-label>
+                                                    <input matInput value=" ">
+                                                    <button class="endorseTransacListbtn" matSuffix><mat-icon>view_list</mat-icon></button>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelDisabledFld" appearance="outline">
+                                                    <mat-label>Profit Center</mat-label>
+                                                    <textarea matInput placeholder="Enter Profile Center..."></textarea>
+                                                </mat-form-field>
+                                            </form>
+                                        </div>
+                                    </div>
+
+
+                                    <div style="display: flex; width: 100%;">
+                                        <div class="endorseTransac2ndExPanelContent">
+                                            <form style="width: 100%;">
+                                                <mat-form-field class="endorseTransac2ndExPanelSearch" appearance="outline">
+                                                    <mat-label>Account Referrer</mat-label>
+                                                    <input matInput value=" " disabled="true">
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelSearch" appearance="outline">
+                                                    <mat-label>Branch Section</mat-label>
+                                                    <input matInput value=" " disabled="true">
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelSearch" appearance="outline">
+                                                    <mat-label>Division/Group</mat-label>
+                                                    <input matInput value=" " disabled="true">
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelSearch" appearance="outline">
+                                                    <mat-label>Business Source</mat-label>
+                                                    <input matInput value=" " disabled="true">
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelSearch" appearance="outline">
+                                                    <mat-label>Mortgagee/ Obligee</mat-label>
+                                                    <input matInput value=" " disabled="true">
+                                                </mat-form-field>
+                                            </form>
+                                        </div>
+
+                                        <div class="endorseTransac2ndExPanelContent">
+                                            <form style="width: 100%;">
+                                                <mat-form-field class="endorseTransac2ndExPanelSearch" appearance="outline">
+                                                    <mat-label>Account Referrer</mat-label>
+                                                    <input matInput value=" ">
+                                                    <button class="endorseTransacListbtn" matSuffix><mat-icon>view_list</mat-icon></button>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelSearch" appearance="outline">
+                                                    <mat-label>Branch Section</mat-label>
+                                                    <input matInput value=" ">
+                                                    <button class="endorseTransacListbtn" matSuffix><mat-icon>view_list</mat-icon></button>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelSearch" appearance="outline">
+                                                    <mat-label>Division/Group</mat-label>
+                                                    <input matInput value=" ">
+                                                    <button class="endorseTransacListbtn" matSuffix><mat-icon>view_list</mat-icon></button>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelSearch" appearance="outline">
+                                                    <mat-label>Business Source</mat-label>
+                                                    <input matInput value=" ">
+                                                    <button class="endorseTransacListbtn" matSuffix><mat-icon>view_list</mat-icon></button>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac2ndExPanelSearch" appearance="outline">
+                                                    <mat-label>Mortgagee/Obligee</mat-label>
+                                                    <input matInput value=" ">
+                                                    <button class="endorseTransacListbtn" matSuffix><mat-icon>view_list</mat-icon></button>
+                                                </mat-form-field>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel [expanded]="stepTransac === 2" (opened)="setStepTransac(2)" (opened)="endorseTransacExpansionPanel = true" (closed)="endorseTransacExpansionPanel = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Other Condition
+                                </mat-panel-title>
+                                <mat-panel-description>
+
+                                </mat-panel-description>
+                            </mat-expansion-panel-header>
+                            <div style="border-top: solid 1px black; padding: 0 30px; width: 100%;">
+                                <div class="endorseTransac3rdExPanelContainer">
+                                    <div class="endorseTransac3rdExPanelTitle">
+                                        <p>Original Policy Information</p>
+
+                                        <p>Ammendments</p>
+                                    </div>
+
+                                    <div style="display: flex; ">
+                                        <div class="endorseTransac3rdExPanelContent">
+                                            <form style="width: 100%;">
+                                                <mat-form-field class="endorseTransac3rdExPanelTextArea" appearance="outline">
+                                                    <mat-label>Account Referrer</mat-label>
+                                                    <textarea matInput placeholder="Enter Account Referrer..." disabled="true"></textarea>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac3rdExPanelTextArea" appearance="outline">
+                                                    <mat-label>Branch Section</mat-label>
+                                                    <textarea matInput placeholder="Enter Branch Section..." disabled="true"></textarea>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac3rdExPanelTextArea" appearance="outline">
+                                                    <mat-label>Division/Group</mat-label>
+                                                    <textarea matInput placeholder="Enter Division/Group..." disabled="true"></textarea>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac3rdExPanelTextArea" appearance="outline">
+                                                    <mat-label>Business Source</mat-label>
+                                                    <textarea matInput placeholder="Enter Business Source..." disabled="true"></textarea>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac3rdExPanelTextArea" appearance="outline">
+                                                    <mat-label>Mortgagee/Obligee</mat-label>
+                                                    <textarea matInput placeholder="Enter Mortgagee/Obligee.." disabled="true"></textarea>
+                                                </mat-form-field>
+                                            </form>
+                                        </div>
+
+                                        <div class="endorseTransac3rdExPanelContent">
+                                            <form style="width: 100%;">
+                                                <mat-form-field class="endorseTransac3rdExPanelTextArea" appearance="outline">
+                                                    <mat-label>Account Referrer</mat-label>
+                                                    <textarea matInput placeholder="Enter Account Referrer..."></textarea>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac3rdExPanelTextArea" appearance="outline">
+                                                    <mat-label>Branch Section</mat-label>
+                                                    <textarea matInput placeholder="Enter Branch Section..."></textarea>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac3rdExPanelTextArea" appearance="outline">
+                                                    <mat-label>Division/Group</mat-label>
+                                                    <textarea matInput placeholder="Enter Division/Group..."></textarea>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac3rdExPanelTextArea" appearance="outline">
+                                                    <mat-label>Business Source</mat-label>
+                                                    <textarea matInput placeholder="Enter Business Source..."></textarea>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseTransac3rdExPanelTextArea" appearance="outline">
+                                                    <mat-label>Mortgagee/Obligee</mat-label>
+                                                    <textarea matInput placeholder="Enter Mortgagee/Obligee.."></textarea>
+                                                </mat-form-field>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div class="endorseStepperBtnNavigation">
+                    <div class="bottom-divider" style="display: flex;">
+                        <button mat-raised-button matStepperPrevious>BACK</button>
+                        <button mat-raised-button>SAVE</button>
+                        <button mat-raised-button>CLOSE</button>
+                    </div>
+
+                    <button mat-raised-button matStepperNext>NEXT</button>
+                </div>
+
+            </form>
+        </mat-step>
+        <!---------->
+
+        <!-------CURRENT POLICY------>
         <mat-step>
             <form class>
-                <ng-template matStepLabel style="width:100%;"><b>CURRENT&nbsp;POLICY</b></ng-template>
+                <ng-template matStepLabel style="width:100%;">CURRENT&nbsp;POLICY</ng-template>
 
                 <!-------CURRENT POLICY------->
 
                 <div class="endorseStepperCurrPolicyContent">
 
                     <a>
-                        <button mat-raised-button> <mat-icon class="fas fa-table" style="color: orange; margin-right: 20px;"></mat-icon> VIEW POLICY TRANSACTION HISTORY
+                        <button mat-raised-button> <mat-icon class="fas fa-table" style="color: orange; margin-right: 5px;"></mat-icon> View Policy Transaction History
                       </button>
                     </a>
 
@@ -182,29 +571,611 @@
 
             </form>
         </mat-step>
-        <!-------CURRENT POLICY------->
-        <mat-step>
-            <form>
-                <ng-template matStepLabel><b>TRANSACTION</b></ng-template>
-
-
-
-                <div class="endorseStepperBtnNavigation">
-                    <div class="bottom-divider" style="display: flex;">
-                        <button mat-raised-button matStepperPrevious>BACK</button>
-                        <button mat-raised-button>SAVE</button>
-                        <button mat-raised-button>CLOSE</button>
-                    </div>
-
-                    <button mat-raised-button matStepperNext>NEXT</button>
-                </div>
-
-            </form>
-        </mat-step>
         <!---------------------------->
+
+        <!---------COVERAGE SUMMARY------------------->
+        <mat-step>
+
+            <form>
+                <ng-template matStepLabel>COVERAGE&nbsp;SUMMARY</ng-template>
+
+                <div style="margin:0px 100px ; border-radius: 4px;">
+                    <div style="display: flex; justify-content: space-around;">
+                        <p style="margin: 0;padding: 0;">Total</p>
+                        <p style="margin: 0;padding: 0;">Total Reductions</p>
+                    </div>
+                    <div style="display: flex; justify-content: space-around;">
+                        <form style="display: flex; flex-direction: column;">
+                            <mat-form-field class="endorseCoverageSummaryDisplay" appearance="fill">
+                                <mat-label>Coverage Amount</mat-label>
+                                <input matInput currencyMask placeholder="" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                            </mat-form-field>
+
+                            <mat-form-field class="endorseCoverageSummaryDisplay" appearance="fill">
+                                <mat-label>Premium Amount</mat-label>
+                                <input matInput currencyMask placeholder="" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                            </mat-form-field>
+
+                            <mat-form-field class="endorseCoverageSummaryDisplay" appearance="fill">
+                                <mat-label>CommisionAmount</mat-label>
+                                <input matInput currencyMask placeholder="" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                            </mat-form-field>
+                        </form>
+
+                        <form style="display: flex; flex-direction: column;">
+
+                            <mat-form-field class="endorseCoverageSummaryDisplay" appearance="fill">
+                                <mat-label>Coverage Amount</mat-label>
+                                <input matInput currencyMask placeholder="" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                            </mat-form-field>
+
+                            <mat-form-field class="endorseCoverageSummaryDisplay" appearance="fill">
+                                <mat-label>Premium Amount</mat-label>
+                                <input matInput currencyMask placeholder="" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                            </mat-form-field>
+
+                            <mat-form-field class="endorseCoverageSummaryDisplay" appearance="fill">
+                                <mat-label>CommisionAmount</mat-label>
+                                <input matInput currencyMask placeholder="" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                            </mat-form-field>
+                        </form>
+                    </div>
+
+                    <!--TABLE HERE-->
+                    <div class="endorseCoverageSummaryTableContainer">
+                        <p style="margin: 0;padding: 0; text-align: center;">POLICY COVERAGE SUMMARY</p>
+
+                        <div style="table-layout: fixed;">
+
+                            <table mat-table [dataSource]="endorseCoverageDataSrc" style="width: 100%; table-layout: fixed;">
+
+                                <!--- Note that these columns can be defined in any order.
+                                  The actual rendered columns are set as a property on the row definition" -->
+
+                                <ng-container matColumnDef="endorseCoverageSummaryNo">
+                                    <th mat-header-cell *matHeaderCellDef> # </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.endorseCoverageSummaryNo}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="endorseCoverageSummaryCoverage">
+                                    <th mat-header-cell *matHeaderCellDef> Coverage </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.endorseCoverageSummaryCoverage}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="endorseCoverageSummaryCoveredAmount">
+                                    <th mat-header-cell *matHeaderCellDef> Covered Amount </th>
+                                    <td mat-cell *matCellDef="let element" style="text-align: right;"> {{element.endorseCoverageSummaryCoveredAmount}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="endorseCoverageSummaryEndCovAmnt">
+                                    <th mat-header-cell *matHeaderCellDef> Endorsed Covered Amount </th>
+                                    <td mat-cell *matCellDef="let element" style="text-align: right;"> {{element.endorseCoverageSummaryEndCovAmnt}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="endorseCoverageSummaryNetCoveredAmnt">
+                                    <th mat-header-cell *matHeaderCellDef> Net Covered Amount </th>
+                                    <td mat-cell *matCellDef="let element" style="text-align: right;"> {{element.endorseCoverageSummaryNetCoveredAmnt}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="endorseCoverageSUmmaryPremiumRate">
+                                    <th mat-header-cell *matHeaderCellDef> Premium Rate </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.endorseCoverageSUmmaryPremiumRate}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="endorseCoverageSummaryPremiumAmnt">
+                                    <th mat-header-cell *matHeaderCellDef> Premium Amount </th>
+                                    <td mat-cell *matCellDef="let element" style="text-align: right;"> {{element.endorseCoverageSummaryPremiumAmnt}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="endorseCoverageSummaryEndorsedPremiumAmnt">
+                                    <th mat-header-cell *matHeaderCellDef> Endorsed Premium Amount </th>
+                                    <td mat-cell *matCellDef="let element" style="text-align: right;"> {{element.endorseCoverageSummaryEndorsedPremiumAmnt}} </td>
+                                </ng-container>
+
+                                <tr mat-header-row *matHeaderRowDef="displayedColumnsCoverageSummary"></tr>
+                                <tr mat-row *matRowDef="let row; columns: displayedColumnsCoverageSummary;"></tr>
+                            </table>
+                        </div>
+                    </div>
+
+
+                    <!--------------->
+                </div>
+
+                <div class="endorseStepperBtnNavigation">
+                    <div class="bottom-divider" style="display: flex;">
+                        <button mat-raised-button matStepperPrevious>BACK</button>
+                        <button mat-raised-button>SAVE</button>
+                        <button mat-raised-button>CLOSE</button>
+                    </div>
+
+                    <button mat-raised-button matStepperNext>NEXT</button>
+                </div>
+
+            </form>
+        </mat-step>
+        <!----------------------------------------------->
+        <!-----------CREDIT MEMO---------->
         <mat-step>
             <form>
-                <ng-template matStepLabel><b>COVERAGE&nbsp;SUMMARY</b></ng-template>
+                <ng-template matStepLabel>CREDIT&nbsp;MEMO</ng-template>
+
+                <div class="endorseCreditMemoExpanPanelContainer">
+                    <mat-accordion>
+                        <mat-expansion-panel [expanded]="stepCreditMemo === 0" (opened)="setStepCreditMemo(0)">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Credit Memo Summary
+                                </mat-panel-title>
+                                <mat-panel-description>
+                                </mat-panel-description>
+                            </mat-expansion-panel-header>
+
+                            <div style="border-top: solid 1px black;">
+                                <div class="endorseTransac2ndExPanelContainer">
+                                    <div style="display:flex;">
+                                        <div class="endorseCreditMemo1stExPanelContent">
+                                            <form>
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftB" appearance="outline">
+                                                    <mat-label>Credit Memo No.</mat-label>
+                                                    <input matInput value="0" disabled="true">
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftADatePicker" appearance="outline">
+                                                    <mat-label>Billing Date</mat-label>
+                                                    <input matInput [matDatepicker]="stepper4FirstEPBillingDate">
+                                                    <mat-datepicker-toggle matSuffix [for]="stepper4FirstEPBillingDate"></mat-datepicker-toggle>
+                                                    <mat-datepicker #stepper4FirstEPBillingDate></mat-datepicker>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftATextArea" appearance="outline">
+                                                    <mat-label>Particulars</mat-label>
+                                                    <textarea matInput placeholder="Enter Particulars..."></textarea>
+                                                </mat-form-field>
+
+                                            </form>
+                                        </div>
+
+                                        <div class="endorseCreditMemo1stExPanelContent">
+                                            <form style="width:100%;">
+                                                <mat-form-field class="endorseTransac1stExPanelContentTitleDisp" appearance="fill">
+                                                    <mat-label>GL Account Type:</mat-label>
+                                                    <b><input matInput value="A/R" disabled="true"></b>
+                                                </mat-form-field>
+
+                                                <div style="border-bottom: solid 1px black;">
+                                                    <p><b>Auto Debit Arrangement</b></p>
+                                                </div>
+
+                                                <section class="ChkBoxADA">
+                                                    <p>ADA Enrolled?</p>
+                                                    <mat-checkbox class="example-margin" disabled="true" style="padding: 0 10px;"></mat-checkbox>
+                                                </section>
+
+                                                <div style="display: flex; justify-content: space-between;">
+                                                    <mat-form-field class="endorseCreditMemo1stExPanelRightA" appearance="outline">
+                                                        <mat-label>Creditable Wtax</mat-label>
+                                                        <input matInput currencyMask placeholder="" disabled="true" value="100.00" [options]="{ prefix: '(', thousands: ',', decimal: '.', suffix:')' }" />
+                                                    </mat-form-field>
+
+                                                    <mat-form-field class="endorseCreditMemo1stExPanelRightA" appearance="outline">
+                                                        <mat-label>Bookrate</mat-label>
+                                                        <input matInput currencyMask placeholder="" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </mat-form-field>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <div style="display:flex;">
+                                        <div class="endorseCreditMemo1stExPanelContent">
+                                            <form style="width: 100%;">
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftB" appearance="outline">
+                                                    <mat-label>Total&nbsp;Sum&nbsp;Insured</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <span mat-prefix>PHP</span>
+                                                        <input matInput currencyMask placeholder="0.00" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftC" appearance="outline">
+                                                    <mat-label>Premium Amount</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <input matInput style="font-weight: bold;" currencyMask placeholder="" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftC" appearance="outline">
+                                                    <mat-label>Total Charges</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <input matInput style="font-weight: bold;" currencyMask placeholder="" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftC" appearance="outline">
+                                                    <mat-label>Gross A/R</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <span mat-prefix>PHP</span>
+                                                        <input matInput currencyMask style="font-weight: bold;" placeholder="0.00" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+
+
+                                            </form>
+                                        </div>
+
+                                        <div class="endorseCreditMemo1stExPanelContent">
+                                            <form style="width:100%;">
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftB" appearance="outline">
+                                                    <mat-label>Documentary Stamp</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <input matInput currencyMask placeholder="" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftB" appearance="outline">
+                                                    <mat-label>Premium Tax</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <input matInput currencyMask placeholder="" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftB" appearance="outline">
+                                                    <mat-label>Fire Service Task</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <input matInput currencyMask placeholder="" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftB" appearance="outline">
+                                                    <mat-label>Local Government Tax</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <input matInput currencyMask placeholder="" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftB" appearance="outline">
+                                                    <mat-label>VAT</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <input matInput currencyMask placeholder="" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftB" appearance="outline">
+                                                    <mat-label>Other Charges</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <input matInput currencyMask placeholder="" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <div style="display:flex;">
+                                        <div class="endorseCreditMemo1stExPanelContent">
+                                            <form style="width: 100%;">
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftB" appearance="outline">
+                                                    <mat-label>Gross Unearned Income</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <input matInput currencyMask placeholder="0.00" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftC" appearance="outline">
+                                                    <mat-label>Gross Commision</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <input matInput style="font-weight: bold;" currencyMask placeholder="" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftC" appearance="outline">
+                                                    <mat-label>Net Commision</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <input matInput style="font-weight: bold;" currencyMask placeholder="" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftB" appearance="outline">
+                                                    <mat-label>Ouput VAT</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <input matInput currencyMask placeholder="0.00" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftB" appearance="outline">
+                                                    <mat-label>Gross A/P</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <input matInput currencyMask placeholder="0.00" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftB" appearance="outline">
+                                                    <mat-label>Withholding Tax</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <input matInput currencyMask placeholder="0.00" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftC" appearance="outline">
+                                                    <mat-label>Net Due</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <input matInput currencyMask style="font-weight: bold;" placeholder="0.00" disabled="true" value="" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                                                    </div>
+                                                </mat-form-field>
+
+                                            </form>
+                                        </div>
+
+                                        <div class="endorseCreditMemo1stExPanelContent">
+                                            <form style="width:100%;">
+
+                                                <div class="" style="margin-bottom: 10px;">
+
+                                                    <a>
+                                                        <button mat-raised-button>
+                                                            <mat-icon style="color: orange; margin-right: 5px;">visibility</mat-icon>PREVIEW CREDIT MEMO
+                                                      </button>
+                                                    </a>
+
+                                                </div>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelRightB" appearance="outline">
+                                                    <mat-label>Billed To:</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <input matInput placeholder="" disabled="true" value="Name04076 C. Axx" />
+                                                    </div>
+                                                </mat-form-field>
+
+                                                <div style="display: flex; padding: 2px;">
+                                                    <label>Use Address Of:</label>
+                                                    <mat-radio-group>
+                                                        <mat-radio-button value="1" checked="true" style="padding:0 5px;">Permanent</mat-radio-button>
+                                                        <mat-radio-button value="2" style="padding:0 5px;">Billing</mat-radio-button>
+                                                        <mat-radio-button value="3" style="padding:0 5px;">Location of Risk</mat-radio-button>
+                                                    </mat-radio-group>
+                                                </div>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftA" appearance="outline">
+                                                    <mat-label></mat-label>
+                                                    <textarea matInput placeholder="" value="Philippines"></textarea>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftA" appearance="outline">
+                                                    <mat-label>Permanent Address</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <textarea matInput placeholder="Enter Permanent Address..." value="Philippines"></textarea>
+                                                    </div>
+                                                </mat-form-field>
+
+                                                <mat-form-field class="endorseCreditMemo1stExPanelLeftA" appearance="outline">
+                                                    <mat-label>Billing Address</mat-label>
+                                                    <div style="display: flex; align-items:center; justify-content:space-between">
+                                                        <textarea matInput placeholder="Enter Permanent Address..." value="Philippines"></textarea>
+                                                    </div>
+                                                </mat-form-field>
+
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel [expanded]="stepCreditMemo === 1" (opened)="setStepTransac(1)" (opened)="endorseCreditMemoExpansionPanel  = true" (closed)="endorseCreditMemoExpansionPanel  = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Apply Coverage Summary
+                                </mat-panel-title>
+                                <mat-panel-description>
+
+                                </mat-panel-description>
+
+                            </mat-expansion-panel-header>
+
+                            <div style="display: flex; justify-content: space-evenly;">
+                                <div style="text-align:center">
+                                    <p>APPLIED COVERAGE SUMMARY</p>
+
+                                    <table mat-table [dataSource]="endorseApplyCoverageDataSrc">
+
+                                        <!--- Note that these columns can be defined in any order.
+                                          The actual rendered columns are set as a property on the row definition" -->
+
+                                        <!-- Position Column -->
+                                        <ng-container matColumnDef="endorseApplyCoverageSummaryNo">
+                                            <th mat-header-cell *matHeaderCellDef> # </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.endorseApplyCoverageSummaryNo}} </td>
+                                        </ng-container>
+
+                                        <!-- Name Column -->
+                                        <ng-container matColumnDef="endorseApplyCoverageSummaryInvoiceNo">
+                                            <th mat-header-cell *matHeaderCellDef> Invoice No. </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.endorseApplyCoverageSummaryInvoiceNo}} </td>
+                                        </ng-container>
+
+                                        <!-- Weight Column -->
+                                        <ng-container matColumnDef="endorseApplyCoverageSummaryCoverage">
+                                            <th mat-header-cell *matHeaderCellDef> Coverage </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.endorseApplyCoverageSummaryCoverage}} </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="endorseApplyCoverageSummaryCoveredAmount">
+                                            <th mat-header-cell *matHeaderCellDef> Covered Amount </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.endorseApplyCoverageSummaryCoveredAmount}} </td>
+                                        </ng-container>
+
+                                        <!-- Symbol Column -->
+                                        <ng-container matColumnDef="endorseApplyCoverageSummaryPremiumAmount">
+                                            <th mat-header-cell *matHeaderCellDef> Premium Amount </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.endorseApplyCoverageSummaryPremiumAmount}} </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="endorseApplyCoverageSummaryCommision">
+                                            <th mat-header-cell *matHeaderCellDef> Commision </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.endorseApplyCoverageSummaryCommision}} </td>
+                                        </ng-container>
+
+                                        <tr mat-header-row *matHeaderRowDef="displayedColumnsApplyCoverageSummary"></tr>
+                                        <tr mat-row *matRowDef="let row; columns: displayedColumnsApplyCoverageSummary;"></tr>
+                                    </table>
+
+
+                                </div>
+
+                                <div style="text-align:center">
+                                    <p>UNAPPLIED COVERAGE SUMMARY</p>
+
+                                    <table mat-table [dataSource]="endorseUnapplyCoverageDataSrc">
+
+                                        <!--- Note that these columns can be defined in any order.
+                                          The actual rendered columns are set as a property on the row definition" -->
+
+                                        <!-- Position Column -->
+                                        <ng-container matColumnDef="endorseUnapplyCoverageSummaryNo">
+                                            <th mat-header-cell *matHeaderCellDef> # </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.endorseUnapplyCoverageSummaryNo}} </td>
+                                        </ng-container>
+
+                                        <!-- Weight Column -->
+                                        <ng-container matColumnDef="endorseUnapplyCoverageSummaryCoverage">
+                                            <th mat-header-cell *matHeaderCellDef> Coverage </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.endorseUnapplyCoverageSummaryCoverage}} </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="endorseUnapplyCoverageSummaryCoveredAmount">
+                                            <th mat-header-cell *matHeaderCellDef> Covered Amount </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.endorseUnapplyCoverageSummaryCoveredAmount}} </td>
+                                        </ng-container>
+
+                                        <!-- Symbol Column -->
+                                        <ng-container matColumnDef="endorseUnapplyCoverageSummaryPremiumAmount">
+                                            <th mat-header-cell *matHeaderCellDef> Premium Amount </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.endorseUnapplyCoverageSummaryPremiumAmount}} </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="endorseUnapplyCoverageSummaryCommision">
+                                            <th mat-header-cell *matHeaderCellDef> Commision </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.endorseUnapplyCoverageSummaryCommision}} </td>
+                                        </ng-container>
+
+                                        <tr mat-header-row *matHeaderRowDef="displayedColumnsUnapplyCoverageSummary"></tr>
+                                        <tr mat-row *matRowDef="let row; columns: displayedColumnsUnapplyCoverageSummary;"></tr>
+                                    </table>
+
+
+                                </div>
+                            </div>
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel [expanded]="stepCreditMemo === 2" (opened)="setStepTransac(2)" (opened)="endorseCreditMemoExpansionPanel  = true" (closed)="endorseCreditMemoExpansionPanel  = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Apply Reduction Summary
+                                </mat-panel-title>
+                                <mat-panel-description>
+
+                                </mat-panel-description>
+                            </mat-expansion-panel-header>
+                            <div style="text-align:center; table-layout: fixed; overflow: auto; width: 100%;">
+                                <p>CREDIT MEMO SUMMARY</p>
+
+                                <table mat-table [dataSource]="endorseCreditMemoSummaryDataSrc" style="width:100%;">
+
+                                    <!--- Note that these columns can be defined in any order.
+                                      The actual rendered columns are set as a property on the row definition" -->
+
+                                    <!-- Position Column -->
+                                    <ng-container matColumnDef="endorseCreditMemoSummaryTSI">
+                                        <th mat-header-cell *matHeaderCellDef> TSI </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.endorseCreditMemoSummaryTSI}} </td>
+                                    </ng-container>
+
+                                    <!-- Weight Column -->
+                                    <ng-container matColumnDef="endorseCreditMemoSummaryPremiumAmount">
+                                        <th mat-header-cell *matHeaderCellDef> Premium Amount </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.endorseCreditMemoSummaryPremiumAmount}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="endorseCreditMemoSummaryDocumentStamp">
+                                        <th mat-header-cell *matHeaderCellDef> Document Stamp </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.endorseCreditMemoSummaryDocumentStamp}} </td>
+                                    </ng-container>
+
+                                    <!-- Symbol Column -->
+                                    <ng-container matColumnDef="endorseCreditMemoSummaryPremiumTax">
+                                        <th mat-header-cell *matHeaderCellDef> Premium Tax </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.endorseCreditMemoSummaryPremiumTax}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="endorseCreditMemoSummaryFST">
+                                        <th mat-header-cell *matHeaderCellDef> FST </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.endorseCreditMemoSummaryFST}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="endorseCreditMemoSummaryLGT">
+                                        <th mat-header-cell *matHeaderCellDef> LGT </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.endorseCreditMemoSummaryLGT}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="endorseCreditMemoSummaryBillingVat">
+                                        <th mat-header-cell *matHeaderCellDef> Billing Vat </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.endorseCreditMemoSummaryBillingVat}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="endorseCreditMemoSummaryOtherCharges">
+                                        <th mat-header-cell *matHeaderCellDef> Other Charges </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.endorseCreditMemoSummaryOtherCharges}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="endorseCreditMemoSummaryTotalCharges">
+                                        <th mat-header-cell *matHeaderCellDef> Total Charges </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.endorseCreditMemoSummaryTotalCharges}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="endorseCreditMemoSummaryGrossAmount">
+                                        <th mat-header-cell *matHeaderCellDef> Gross Amount </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.endorseCreditMemoSummaryGrossAmount}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="endorseCreditMemoSummaryGrossCommision">
+                                        <th mat-header-cell *matHeaderCellDef> Gross Commission </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.endorseCreditMemoSummaryGrossCommision}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="endorseCreditMemoSummaryUnearnedIncome">
+                                        <th mat-header-cell *matHeaderCellDef> Unearned Income </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.endorseCreditMemoSummaryUnearnedIncome}} </td>
+                                    </ng-container>
+
+                                    <tr mat-header-row *matHeaderRowDef="displayedCreditMemoSummary"></tr>
+                                    <tr mat-row *matRowDef="let row; columns: displayedCreditMemoSummary;"></tr>
+                                </table>
+
+
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+                <div class="endorseStepperBtnNavigation">
+                    <div class="bottom-divider" style="display: flex;">
+                        <button mat-raised-button matStepperPrevious>BACK</button>
+                        <button mat-raised-button>SAVE</button>
+                        <button mat-raised-button>CLOSE</button>
+                    </div>
+
+                    <button mat-raised-button matStepperNext>NEXT</button>
+                </div>
+
+            </form>
+        </mat-step>
+        <!-------------------------------->
+        <mat-step>
+            <form>
+                <ng-template matStepLabel>REQUEST&nbsp;FOR&nbsp;DOCUMENTATION</ng-template>
 
                 <div class="endorseStepperBtnNavigation">
                     <div class="bottom-divider" style="display: flex;">
@@ -221,7 +1192,7 @@
 
         <mat-step>
             <form>
-                <ng-template matStepLabel><b>CREDIT&nbsp;MEMO</b></ng-template>
+                <ng-template matStepLabel>ATTACHMENT</ng-template>
 
                 <div class="endorseStepperBtnNavigation">
                     <div class="bottom-divider" style="display: flex;">
@@ -238,41 +1209,7 @@
 
         <mat-step>
             <form>
-                <ng-template matStepLabel><b>REQUEST&nbsp;FOR&nbsp;DOCUMENTATION</b></ng-template>
-
-                <div class="endorseStepperBtnNavigation">
-                    <div class="bottom-divider" style="display: flex;">
-                        <button mat-raised-button matStepperPrevious>BACK</button>
-                        <button mat-raised-button>SAVE</button>
-                        <button mat-raised-button>CLOSE</button>
-                    </div>
-
-                    <button mat-raised-button matStepperNext>NEXT</button>
-                </div>
-
-            </form>
-        </mat-step>
-
-        <mat-step>
-            <form>
-                <ng-template matStepLabel><b>ATTACHMENT</b></ng-template>
-
-                <div class="endorseStepperBtnNavigation">
-                    <div class="bottom-divider" style="display: flex;">
-                        <button mat-raised-button matStepperPrevious>BACK</button>
-                        <button mat-raised-button>SAVE</button>
-                        <button mat-raised-button>CLOSE</button>
-                    </div>
-
-                    <button mat-raised-button matStepperNext>NEXT</button>
-                </div>
-
-            </form>
-        </mat-step>
-
-        <mat-step>
-            <form>
-                <ng-template matStepLabel><b>ENDORSEMENT&nbsp;SYSTEM</b></ng-template>
+                <ng-template matStepLabel>ENDORSEMENT&nbsp;SYSTEM</ng-template>
 
                 <div class="endorseStepperBtnNavigation">
                     <div class="bottom-divider" style="display: flex;">
