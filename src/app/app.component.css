@@ -7,7 +7,7 @@ body {
 }
 
 span {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 p {
@@ -31,8 +31,9 @@ p {
     height: 50px;
 }
 
-::ng-deep .mat-accordion {
-    font-family: 'Poppins', sans-serif;
+::ng-deep .mat-accordion,
+::ng-deep .mat-select {
+    font-family: 'Poppins', sans-serif !important;
 }
 
 ::ng-deep .mat-expansion-panel-body {
@@ -640,3 +641,90 @@ ul.endorseBreadcrumb li+li:before {
 
 
 /*------------------------------------------------------*/
+
+
+/*SCR4104016*/
+
+:host {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+th {
+    font-size: 12px;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    font-size: 13px;
+}
+
+th.mat-header-cell {
+    text-align: center;
+    padding: 0 15px;
+    font-weight: 1000;
+    font-size: 12px;
+}
+
+tr.mat-header-row {
+    height: 40px;
+}
+
+tr.mat-row {
+    height: 33px;
+}
+
+.mat-icon-button {
+    height: 33px
+}
+
+td.mat-cell {
+    font-size: 11px;
+    text-align: right;
+    padding: 0 15px;
+}
+
+ ::ng-deep .mat-cell {
+    padding: 0;
+    margin: 0;
+}
+
+.mat-table {
+    overflow: scroll;
+    table-layout: fixed;
+}
+
+.endorseSpnBtn {
+    flex: 1 1 auto;
+}
+
+.endorseAddBtn {
+    background-color: blue;
+    font-size: 13px;
+}
+
+.endorseAddBtn:hover {
+    background-color: darkblue;
+}
+
+ ::ng-deep .mat-dialog-title {
+    font-family: 'Poppins', sans-serif;
+}
+
+@media screen and(max-width: 500px) {
+    th {
+        padding: 0 100%;
+    }
+    .endorseTblAction {
+        width: auto;
+        align-items: center;
+        height: 100%;
+    }
+    table {
+        overflow: auto;
+    }
+}
+
+
+/*---------------------------*/

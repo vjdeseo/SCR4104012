@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DialogComponent } from './dialog/dialog.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
@@ -28,7 +29,8 @@ import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, 
+    DialogComponent
 
   ],
   imports: [
@@ -57,6 +59,6 @@ import {MatRadioModule} from '@angular/material/radio';
     MatRadioModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent ]
 })
 export class AppModule { }

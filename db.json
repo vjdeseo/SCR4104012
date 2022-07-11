@@ -1,0 +1,41 @@
+{
+    "rsList": [{
+            "endorseTblDataInvoiceNo": "10075",
+            "endorseTblDataDocumentStamp": 1200,
+            "endorseTblDataDocumentTax": 1000,
+            "endorseTblDataFST": 10000,
+            "endorseTblDataLGT": 10320,
+            "endorseTblDataBillingVAT": 12544,
+            "endorseTblDataOtherCharges": 14422,
+            "id": 2
+        },
+        {
+            "endorseTblDataInvoiceNo": "10050",
+            "endorseTblDataDocumentStamp": 241000,
+            "endorseTblDataDocumentTax": 1201,
+            "endorseTblDataFST": 23213,
+            "endorseTblDataLGT": 124,
+            "endorseTblDataBillingVAT": 1246,
+            "endorseTblDataOtherCharges": 1246,
+            "id": 3
+        },
+        {
+            "endorseTblDataInvoiceNo": "10025",
+            "endorseTblDataDocumentStamp": 212,
+            "endorseTblDataDocumentTax": 120,
+            "endorseTblDataFST": 2012,
+            "endorseTblDataLGT": 1212120,
+            "endorseTblDataBillingVAT": 21212121210,
+            "endorseTblDataOtherCharges": 121110,
+            "id": 4
+        }
+    ],
+    "comments": [{
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+    }],
+    "profile": {
+        "name": "typicode"
+    }
+}
