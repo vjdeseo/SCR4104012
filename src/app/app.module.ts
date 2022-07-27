@@ -3,7 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DialogComponent } from './dialog/dialog.component';
+import { DialogComponentSCR4104016 } from './dialogSCR4104016/dialog.component';
+import { DialogComponentSCR4104012 } from './dialogSCR4104012/dialog-component';
+import { DialogComponentSCR4104015 } from './dialogSCR4104015/dialog.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
@@ -30,7 +32,9 @@ import {MatRadioModule} from '@angular/material/radio';
 @NgModule({
   declarations: [
     AppComponent, 
-    DialogComponent
+    DialogComponentSCR4104016,
+    DialogComponentSCR4104012,
+    DialogComponentSCR4104015,
 
   ],
   imports: [
@@ -61,4 +65,5 @@ import {MatRadioModule} from '@angular/material/radio';
   providers: [],
   bootstrap: [AppComponent ]
 })
-export class AppModule { }
+export class AppModule  { }
+

@@ -1,0 +1,138 @@
+.endorseTableHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0px 5px 0px;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border-top: solid 2px blue;
+    border-bottom: solid 2px blue;
+}
+
+.endorseTitleLbl {
+    font-weight: bold;
+}
+
+.endoreScrnIdLbl {
+    font-size: 12px;
+    background-color: royalblue;
+    color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.endorseTableForm {
+    display: flex;
+    width: 100%;
+}
+
+.endorseFormContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.endorsePolInvCovContainer {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.endorsePolInvCovContainer span {
+    font-size: 13px;
+}
+
+.endorseReducCovContainer {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.endorseReducCovContainer span {
+    font-size: 13px;
+}
+
+.endorseNetCovContainer {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.endorseNetCovContainer span {
+    font-size: 13px;
+}
+
+.endorsePolInvCovContainer,
+.endorseReducCovContainer,
+.endorseNetCovContainer {
+    width: 50%;
+    margin: 15px;
+    font-size: 13px;
+}
+
+.endorsePolInvCovTitleContainer,
+.endorseReducCovTitleContainer,
+.endorseNetCovTitleContainer {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.endorsePolInvCovTitleContainer span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.endorseReducCovTitleContainer span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.endorseNetCovTitleContainer span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.mat-form-field {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.endorseConfirmBtn {
+    background-color: rgba(255, 165, 0, 0.7);
+    color: white;
+    border-color: none;
+    text-transform: uppercase;
+}
+
+.endorseConfirmBtn:hover {
+    background-color: orange;
+}
+
+.endorseCancelBtn {
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white;
+    border-color: none;
+    text-transform: uppercase;
+}
+
+.endorseCancelBtn:hover {
+    background-color: red;
+}
+
+::ng-deep.endorseRemFld.mat-form-field-appearance-outline .mat-form-field-infix {
+    height: 82.5px;
+}
+
+::ng-deep textarea.mat-input-element {
+    height: 82.5px;
+}
+
+::ng-deep.mat-form-field-wrapper {
+    padding: 5px;
+}

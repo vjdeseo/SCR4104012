@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { DialogComponent } from './dialog/dialog.component';
+import { DialogComponentSCR4104016 } from './dialogSCR4104016/dialog.component';
+import { DialogComponentSCR4104012 } from './dialogSCR4104012/dialog-component';
+import { DialogComponentSCR4104015 } from './dialogSCR4104015/dialog.component';
 import { ApiService } from './services/api.service';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
@@ -108,8 +110,8 @@ export class AppComponent implements OnInit {
   endorseCreditMemoSummaryDataSrc = endorseCreditMemoSummary;
 
 //SCR4104016
-endorseTbldisplayedColumns: string[] = ['endorseTblDataAction','id', 'endorseTblDataInvoiceNo', 'endorseTblDataDocumentStamp', 'endorseTblDataDocumentTax', 'endorseTblDataFST', 'endorseTblDataLGT', 'endorseTblDataBillingVAT', 'endorseTblDataOtherCharges'];
-  endorseDataSrc!: MatTableDataSource<any>;
+endorseTbldisplayedColumnsSCR4104016: string[] = ['endorseTblDataAction','id', 'endorseTblDataInvoiceNo', 'endorseTblDataDocumentStamp', 'endorseTblDataDocumentTax', 'endorseTblDataFST', 'endorseTblDataLGT', 'endorseTblDataBillingVAT', 'endorseTblDataOtherCharges'];
+  endorseDataSrcSCR4104016!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -119,28 +121,30 @@ endorseTbldisplayedColumns: string[] = ['endorseTblDataAction','id', 'endorseTbl
 
   }
   ngOnInit(): void {
-    this.getAllList();
+    this.getAllListSCR4104016();
+    this.getAllListSCR4104012();
+    this.getAllListSCR4104015();
   }
 
   openDialog() {
-    this.dialog.open(DialogComponent, {
+    this.dialog.open(DialogComponentSCR4104016, {
       width:'60%',
       height: '57%'
     }).afterClosed().subscribe(val=>{
       if(val == "SAVE"){
-        this.getAllList();
+        this.getAllListSCR4104016();
         alert("List Added Succesfully");
       }
     });
   } 
-  getAllList(){
-     this.api.getadd()
+  getAllListSCR4104016(){
+     this.api.getaddSCR4104016()
 
      .subscribe({
        next:(res)=>{
-         this.endorseDataSrc = new MatTableDataSource(res);
-         this.endorseDataSrc.paginator = this.paginator;
-         this.endorseDataSrc.sort = this.sort;
+         this.endorseDataSrcSCR4104016 = new MatTableDataSource(res);
+         this.endorseDataSrcSCR4104016.paginator = this.paginator;
+         this.endorseDataSrcSCR4104016.sort = this.sort;
          console.table(res);
        },
        error:(err)=>{
@@ -149,29 +153,132 @@ endorseTbldisplayedColumns: string[] = ['endorseTblDataAction','id', 'endorseTbl
      });
   }
 
-  editItem(row : any){
-    this.dialog.open(DialogComponent,{
+  editItemSCR4104016(row : any){
+    this.dialog.open(DialogComponentSCR4104016,{
       width:'60%',
       height: '57%',
       data : row,
     }).afterClosed().subscribe(val=>{
       if(val == "UPDATE"){
-        this.getAllList(); 
+        this.getAllListSCR4104016(); 
         alert("List Succesfully");
       }
     });
   }
 
-  deleteList(id:number){
-    this.api.deleteData(id)
+  deleteListSCR4104016(id:number){
+    this.api.deleteDataSCR4104016(id)
     .subscribe({
       next:(res)=>{
         alert("List Deleted Succesfully");
-        this.getAllList();
+        this.getAllListSCR4104016();
       },
       error:()=>{
         alert("Error while Deleting the List");
       }
     });
   }
+
+  ///SCR4104012
+  displayedColumnsSCR4104012: string[] = ['action', 'id', 'endorseCovFld', 'endorseCovDescFld', 'endorseNetCovAmtFld', 'endorseReducCovAmtFld', 'endorseNetPremAmtFld', 'endorseReducPremAmtFld', 'endorseNetCommFld', 'endorseReducCommFld', 'endorseRemFld'];
+  datasourceSCR4104012!: MatTableDataSource<any>;
+
+
+
+  openDialogSCR4104012() {
+    this.dialog.open(DialogComponentSCR4104012, {      
+    width:'60%',
+    height: '46%',
+    }).afterClosed().subscribe(val=>{
+      if(val == 'SAVE'){
+        this.getAllListSCR4104012();
+        alert("List Added Succesfully");
+      }
+    });
+  }
+  getAllListSCR4104012(){
+     this.api.getaddSCR4104012()
+     .subscribe({
+       next:(res)=>{
+         this.datasourceSCR4104012 = new MatTableDataSource(res);
+       },
+       error:(err)=>{
+        alert("Error adding a List");
+       }
+     });
+  }
+
+  editItemSCR4104012(row : any){
+    this.dialog.open(DialogComponentSCR4104012,{
+      width:'60%',
+      height: '46%',
+      data : row,
+    }).afterClosed().subscribe(val=>{
+      if(val == 'UPDATE'){
+        this.getAllListSCR4104012();
+        alert("List Succesfully");
+      }
+    });
+  }
+
+  deleteListSCR4104012(id:number){
+    this.api.deleteDataSCR4104012(id)
+    .subscribe({
+      next:(res)=>{
+        alert("List Deleted Succesfully");
+        this.getAllListSCR4104012();
+      },
+      error:()=>{
+        alert("Error while Deleting the List");
+      }
+    });
+  }
+
+//SCR4104015
+displayedColumnsSCR4104015: string[] = ['action', 'id', 'endorseInvnoFld', 'endorseCovFld', 'endorseCovDescFld', 'endorseCovAmtFld', 'endorseEndorseCovAmtFld', 'endorseNetCovAmtFld', 'endorsePremRateFld', 'endorsePremAmtFld', 'endorseEndorsePremAmtFld', 'endorseNetPremAmtFld', 'endorseCommRateFld', 'endorseCommFld', 'endorseEndorseCommFld', 'endorseNetCommFld', 'endorseRemFld'];
+datasourceSCR4104015!: MatTableDataSource<any>;
+openDialogSCR4104015() {
+  this.dialog.open(DialogComponentSCR4104015, {
+    width:'60%',
+    height: '68%',
+  });
 }
+getAllListSCR4104015(){
+  this.api.getaddSCR4104015()
+  .subscribe({
+    next:(res)=>{
+      this.datasourceSCR4104015 = new MatTableDataSource(res);
+    },
+    error:(err)=>{
+      alert("Error while fetching the records")
+    }
+  })
+}
+editItemSCR4104015(row : any){
+  this.dialog.open(DialogComponentSCR4104015,{
+    width:'60%',
+    height: '68%',
+    data : row,
+  }).afterClosed().subscribe(val=>{
+    if(val == 'UPDATE'){
+      this.getAllListSCR4104015();
+      alert("List Succesfully");
+    }
+  });
+}
+
+deleteListSCR4104015(id:number){
+  this.api.deleteDataSCR4104015(id)
+
+  .subscribe({
+    next:(res)=>{
+      alert("List Deleted Succesfully");
+      this.getAllListSCR4104015();
+    },
+    error:()=>{
+      alert("Error while Deleting the List");
+    }
+  });
+}
+}
+

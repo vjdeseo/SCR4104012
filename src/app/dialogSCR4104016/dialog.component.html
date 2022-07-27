@@ -6,7 +6,7 @@
 
 <mat-dialog-content class="mat-typography">
     <div class="endorseDialogContainer">
-        <form class="endorseDialogContainerForm" [formGroup]="endorseAddForm">
+        <form class="endorseDialogContainerForm" [formGroup]="endorseAddFormSCR4104016">
             <div class="endorsePolInvCovContainer" style="font-size: 13px;">
                 <div class="pict">
                     <span style="font-weight: bold;">Policy Invoice Coverage</span>
@@ -14,7 +14,7 @@
 
                 <mat-form-field class="endorsePolInvCovInvNo" appearance="outline" style="width:50%">
                     <mat-label>Invoice No.</mat-label>
-                    <mat-select matNativeControl required style="height:100%; width: 100%;" ngModel="true" class="test" [formControl]="invoiceSelected" formControlName="endorseTblDataInvoiceNo">
+                    <mat-select matNativeControl required style="height:100%; width: 100%;" ngModel="true" class="test" [formControl]="invoiceSelectedSCR4104016" formControlName="endorseTblDataInvoiceNo">
                         <mat-option value="10025">10025</mat-option>
                         <mat-option value="10050">10050</mat-option>
                         <mat-option value="10075">10075</mat-option>
@@ -23,32 +23,32 @@
 
                 <mat-form-field class="endorsePolInvCovValDocStamp" appearance="outline">
                     <mat-label>Valid Document Stamp</mat-label>
-                    <input matInput placeholder="0.00" value="" type="number" disabled="true" style="cursor: not-allowed">
+                    <input matInput placeholder="0.00" value="" maxlength="14" type="number" disabled="true" style="cursor: not-allowed">
                 </mat-form-field>
 
                 <mat-form-field class="endorsePolInvCovValPreTax" appearance="outline">
                     <mat-label>Valid Premium Tax</mat-label>
-                    <input matInput placeholder="0.00" value="" type="number" disabled="true" style="cursor: not-allowed">
+                    <input matInput placeholder="0.00" value="" maxlength="14" type="number" disabled="true" style="cursor: not-allowed">
                 </mat-form-field>
 
                 <mat-form-field class="endorsePolInvCovValFST" appearance="outline">
                     <mat-label>Valid FST</mat-label>
-                    <input matInput placeholder="0.00" value="" type="number" disabled="true" style="cursor: not-allowed">
+                    <input matInput placeholder="0.00" value="" maxlength="14" type="number" disabled="true" style="cursor: not-allowed">
                 </mat-form-field>
 
                 <mat-form-field class="endorsePolInvCovValLGT" appearance="outline">
                     <mat-label>Valid LGT</mat-label>
-                    <input matInput placeholder="0.00" value="" type="number" disabled="true" style="cursor: not-allowed">
+                    <input matInput placeholder="0.00" value="" maxlength="14" type="number" disabled="true" style="cursor: not-allowed">
                 </mat-form-field>
 
                 <mat-form-field class="endorsePolInvCovValBilVat" appearance="outline">
                     <mat-label>Valid Billing VAT</mat-label>
-                    <input matInput placeholder="0.00" value="" type="number" disabled="true" style="cursor: not-allowed">
+                    <input matInput placeholder="0.00" value="" maxlength="14" type="number" disabled="true" style="cursor: not-allowed">
                 </mat-form-field>
 
                 <mat-form-field class="endorsePolInvCovValOtCharge" appearance="outline">
                     <mat-label>Valid Other Charges</mat-label>
-                    <input matInput placeholder="0.00" value="" type="number" disabled="true" style="cursor: not-allowed">
+                    <input matInput placeholder="0.00" value="" maxlength="14" type="number" disabled="true" style="cursor: not-allowed">
                 </mat-form-field>
             </div>
 
@@ -59,37 +59,37 @@
 
                 <mat-form-field class="endorseRedSumInvNo" appearance="outline" style="width:50%">
                     <mat-label>Invoice No.</mat-label>
-                    <input matInput placeholder="0.00" value="" type="number" [disabled]="true" [value]="invoiceSelected.value">
+                    <input matInput placeholder="0.00" value="" maxlength="14" type="number" [disabled]="true" [value]="invoiceSelectedSCR4104016.value">
                 </mat-form-field>
 
                 <mat-form-field class="endorseRedSumDocStamp" appearance="outline">
                     <mat-label>Document Stamp</mat-label>
-                    <input matInput currencyMask placeholder="0.00" value="" formControlName="endorseTblDataDocumentStamp" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                    <input matInput currencyMask placeholder="0.00" value="" maxlength="14" formControlName="endorseTblDataDocumentStamp" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
                 </mat-form-field>
 
                 <mat-form-field class="endorseRedSumDocTax" appearance="outline">
                     <mat-label>Document Tax</mat-label>
-                    <input matInput currencyMask placeholder="0.00" value="" formControlName="endorseTblDataDocumentTax" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                    <input matInput currencyMask placeholder="0.00" value="" maxlength="14" formControlName="endorseTblDataDocumentTax" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
                 </mat-form-field>
 
                 <mat-form-field class="endorseRedSumFST" appearance="outline">
                     <mat-label>FST</mat-label>
-                    <input matInput currencyMask placeholder="0.00" value="" formControlName="endorseTblDataFST" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                    <input matInput currencyMask placeholder="0.00" value="" maxlength="14" formControlName="endorseTblDataFST" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
                 </mat-form-field>
 
                 <mat-form-field class="endorseRedSumLGT" appearance="outline">
                     <mat-label>LGT</mat-label>
-                    <input matInput currencyMask placeholder="0.00" value="" formControlName="endorseTblDataLGT" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                    <input matInput currencyMask placeholder="0.00" value="" maxlength="14" formControlName="endorseTblDataLGT" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
                 </mat-form-field>
 
                 <mat-form-field class="endorseRedSumBilVat" appearance="outline">
                     <mat-label>Billing VAT</mat-label>
-                    <input matInput currencyMask placeholder="0.00" value="" formControlName="endorseTblDataBillingVAT" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                    <input matInput currencyMask placeholder="0.00" value="" maxlength="14" formControlName="endorseTblDataBillingVAT" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
                 </mat-form-field>
 
                 <mat-form-field class="endorseRedSumOtCharge" appearance="outline">
                     <mat-label>Other Charges</mat-label>
-                    <input matInput currencyMask placeholder="0.00" value="" formControlName="endorseTblDataOtherCharges" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
+                    <input matInput currencyMask placeholder="0.00" value="" maxlength="14" formControlName="endorseTblDataOtherCharges" [options]="{ prefix: '', thousands: ',', decimal: '.' }" />
                 </mat-form-field>
             </div>
         </form>
@@ -97,7 +97,7 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end" style="margin-right: 30px;">
     <button mat-raised-button [mat-dialog-close]="true" cdkFocusInitial class="endorseDialogConfirmBtn" style="padding:0% 2%; font-size:13px; margin: 0;" (click)="EndorseDataaddList()">
-        <span style="display: flex; align-items: center;"><mat-icon>save</mat-icon>{{actionBtn}}</span>
+        <span style="display: flex; align-items: center;"><mat-icon>save</mat-icon>{{actionBtnSCR4104016}}</span>
     </button>
     <button mat-raised-button mat-dialog-close class="endorseDialogCancelBtn" tyle="padding:0% 2%; font-size:13px; margin:0;">
       <span style="display: flex; align-items: center;"><mat-icon>cancel</mat-icon>CANCEL</span>

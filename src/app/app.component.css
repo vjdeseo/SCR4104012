@@ -728,3 +728,32 @@ td.mat-cell {
 
 
 /*---------------------------*/
+
+
+/*SCR4104015*/
+
+
+/* table */
+
+.endorseTableContainerSCR4104015 {
+    padding: 0;
+    overflow: auto;
+}
+
+.endorseCovSummTbl {
+    box-shadow: none;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.mat-header-cell {
+    text-align: center;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+.mat-cell {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+}

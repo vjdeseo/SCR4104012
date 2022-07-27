@@ -1,41 +1,165 @@
 {
-    "rsList": [{
-            "endorseTblDataInvoiceNo": "10075",
-            "endorseTblDataDocumentStamp": 1200,
-            "endorseTblDataDocumentTax": 1000,
-            "endorseTblDataFST": 10000,
-            "endorseTblDataLGT": 10320,
-            "endorseTblDataBillingVAT": 12544,
-            "endorseTblDataOtherCharges": 14422,
-            "id": 2
-        },
-        {
-            "endorseTblDataInvoiceNo": "10050",
-            "endorseTblDataDocumentStamp": 241000,
-            "endorseTblDataDocumentTax": 1201,
-            "endorseTblDataFST": 23213,
-            "endorseTblDataLGT": 124,
-            "endorseTblDataBillingVAT": 1246,
-            "endorseTblDataOtherCharges": 1246,
-            "id": 3
-        },
-        {
-            "endorseTblDataInvoiceNo": "10025",
-            "endorseTblDataDocumentStamp": 212,
-            "endorseTblDataDocumentTax": 120,
-            "endorseTblDataFST": 2012,
-            "endorseTblDataLGT": 1212120,
-            "endorseTblDataBillingVAT": 21212121210,
-            "endorseTblDataOtherCharges": 121110,
-            "id": 4
-        }
-    ],
-    "comments": [{
-        "id": 1,
-        "body": "some comment",
-        "postId": 1
-    }],
-    "profile": {
-        "name": "typicode"
+  "endorseSCR4104016": [
+    {
+      "endorseTblDataInvoiceNo": "10050",
+      "endorseTblDataDocumentStamp": 241000,
+      "endorseTblDataDocumentTax": 1201,
+      "endorseTblDataFST": 23213,
+      "endorseTblDataLGT": 124,
+      "endorseTblDataBillingVAT": 1246,
+      "endorseTblDataOtherCharges": 1246,
+      "id": 3
+    },
+    {
+      "endorseTblDataInvoiceNo": "10025",
+      "endorseTblDataDocumentStamp": 212,
+      "endorseTblDataDocumentTax": 120,
+      "endorseTblDataFST": 2012,
+      "endorseTblDataLGT": 1212120,
+      "endorseTblDataBillingVAT": 21212121210,
+      "endorseTblDataOtherCharges": 121110,
+      "id": 4
+    },
+    {
+      "endorseTblDataInvoiceNo": "10050",
+      "endorseTblDataDocumentStamp": 210,
+      "endorseTblDataDocumentTax": 230,
+      "endorseTblDataFST": 321221.21,
+      "endorseTblDataLGT": 256.66,
+      "endorseTblDataBillingVAT": 2540,
+      "endorseTblDataOtherCharges": 2650,
+      "id": 5
     }
+  ],
+  "CoverageListSCR4104012": [
+    {
+      "endorseCovFld": "M&A",
+      "endorseCovDescFld": "Murder and Assault Rider",
+      "endorseNetCovAmtFld": 1000,
+      "endorseReducCovAmtFld": 6666,
+      "endorseNetPremAmtFld": 1500,
+      "endorseReducPremAmtFld": 8888,
+      "endorseNetCommFld": 1350,
+      "endorseReducCommFld": 2322.5,
+      "endorseRemFld": "    ",
+      "id": 1
+    },
+    {
+      "endorseCovFld": "M&A",
+      "endorseCovDescFld": "Velting lang boss",
+      "endorseNetCovAmtFld": 10,
+      "endorseReducCovAmtFld": 60,
+      "endorseNetPremAmtFld": 20,
+      "endorseReducPremAmtFld": 550,
+      "endorseNetCommFld": 30,
+      "endorseReducCommFld": 100,
+      "endorseRemFld": "Sumobra bayad mo Vel",
+      "id": 2
+    },
+    {
+      "endorseCovFld": "M&A",
+      "endorseCovDescFld": "Test mike",
+      "endorseNetCovAmtFld": 70,
+      "endorseReducCovAmtFld": 700,
+      "endorseNetPremAmtFld": 30,
+      "endorseReducPremAmtFld": 320,
+      "endorseNetCommFld": 52,
+      "endorseReducCommFld": 30,
+      "endorseRemFld": "Jack 123",
+      "id": 3
+    },
+    {
+      "endorseCovFld": "M&A",
+      "endorseCovDescFld": "Add Form",
+      "endorseNetCovAmtFld": 20,
+      "endorseReducCovAmtFld": 350,
+      "endorseNetPremAmtFld": 30,
+      "endorseReducPremAmtFld": 710,
+      "endorseNetCommFld": 450,
+      "endorseReducCommFld": 820,
+      "endorseRemFld": "Debugging",
+      "id": 4
+    }
+  ],
+  "AppCovReducValInvListSCR4104015": [
+    {
+      "endorseInvnoFld": "1016901",
+      "endorseCovFLd": "M&A",
+      "endorseReducInvnoFld": "one",
+      "endorseReducCovFld": "one",
+      "endorseReducCovAmtFld": 31231,
+      "endorseReducPremAmtFld": 123,
+      "endorseReducCommFld": 31231,
+      "endorseRemFld": "shfjshdgksjh",
+      "id": 1
+    },
+    {
+      "endorseInvnoFld": "1016903",
+      "endorseCovFLd": "M&A",
+      "endorseReducInvnoFld": "two",
+      "endorseReducCovFld": "one",
+      "endorseReducCovAmtFld": 123123,
+      "endorseReducPremAmtFld": 23123,
+      "endorseReducCommFld": 123123,
+      "endorseRemFld": "efwsfegfsdgsg",
+      "id": 2
+    },
+    {
+      "endorseInvnoFld": "1016902",
+      "endorseCovFLd": "M&A",
+      "endorseCovDescFld": "eqweqwe",
+      "endorseCovAmtFld": 1231231,
+      "endorsePremAmtFld": 3123123,
+      "endorseCommFld": 1231,
+      "endorsePremRateFld": 13113,
+      "endorseCommRateFld": 12312,
+      "endorseReducCovAmtFld": 231,
+      "endorseReducPremAmtFld": 1231,
+      "endorseReducCommFld": 1231,
+      "endorseNetCovAmtFld": 231231,
+      "endorseNetPremAmtFld": 123123,
+      "endorseNetCommFld": 2312,
+      "endorseRemFld": "sdasfasfa",
+      "id": 3
+    },
+    {
+      "endorseInvnoFld": "1016901",
+      "endorseCovFLd": "M&A",
+      "endorseCovDescFld": "weqweqewqeqweqweqwe",
+      "endorseCovAmtFld": 3453453,
+      "endorsePremAmtFld": 345345345,
+      "endorseCommFld": 3534534534,
+      "endorsePremRateFld": 45345,
+      "endorseCommRateFld": 34534,
+      "endorseReducCovAmtFld": 3123123,
+      "endorseReducPremAmtFld": 1231232,
+      "endorseReducCommFld": 213123,
+      "endorseNetCovAmtFld": 78978978,
+      "endorseNetPremAmtFld": 8978979,
+      "endorseNetCommFld": 78987897897,
+      "endorseRemFld": "sgfsdfdfhfgh",
+      "id": 4
+    },
+    {
+      "endorseInvnoFld": "1016901",
+      "endorseCovFld": "M&A",
+      "endorseCovDescFld": "sdgvdgfdfgdfg",
+      "endorseCovAmtFld": 1231231,
+      "endorsePremAmtFld": 123123,
+      "endorseCommFld": 4312312,
+      "endorsePremRateFld": 131231,
+      "endorseCommRateFld": 23123,
+      "endorseReducCovAmtFld": 31231232,
+      "endorseReducPremAmtFld": 1231232,
+      "endorseReducCommFld": 1321312,
+      "endorseNetCovAmtFld": 3123123,
+      "endorseNetPremAmtFld": 123123,
+      "endorseNetCommFld": 3131231,
+      "endorseRemFld": "dsgsgsgerg",
+      "id": 5
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }

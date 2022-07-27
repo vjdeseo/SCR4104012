@@ -1,0 +1,160 @@
+<div class="endorseTableHeader">
+    <p></p>
+    <label class="endorseTitleLbl" style="margin-left: 10%;">Apply Coverage Reduction to Valid Invoices</label>
+    <label class="endoreScrnIdLbl">Screen ID: SCR4104015</label>
+</div>
+<mat-dialog-content class="mat_content">
+    <div class="endorseFormContainer">
+        <form [formGroup]="tableFormSCR4104015" class="endorseTableForm">
+            <div class="endorsePolInvCovContainer">
+                <div class="endorsePolInvCovTitleContainer">
+                    <span style="font-weight: bold;">Policy Invoice Coverage</span>
+                </div>
+
+                <mat-form-field class="endorseInvnoFld" appearance="outline" style="width: 75%;">
+                    <mat-label>Invoice No.</mat-label>
+                    <mat-select formControlName="endorseInvnoFld">
+                        <mat-option value="1016901">1016901</mat-option>
+                        <mat-option value="1016902">1016902</mat-option>
+                        <mat-option value="1016903">1016903</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="endorseCovFld" appearance="outline" style="width: 75%;">
+                    <mat-label>Coverage</mat-label>
+                    <mat-select formControlName="endorseCovFld">
+                        <mat-option value="M&A">M&A</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="endorseCovDescFld" appearance="outline" style="width: 100%;">
+                    <mat-label>Coverage Description</mat-label>
+                    <input formControlName="endorseCovDescFld" matInput placeholder="" value="" type="text">
+                </mat-form-field>
+
+                <mat-form-field class="endorseCovAmtFld" appearance="outline" style="width: 100%;">
+                    <mat-label>Covered Amount</mat-label>
+                    <input formControlName="endorseCovAmtFld" matInput currencyMask placeholder="0.00" value="" type="" maxlength="14" [options]="{ prefix: '', thousands: ',', decimal: '.', suffix:'' }" />
+                </mat-form-field>
+
+                <mat-form-field class="endorsePremAmtFld" appearance="outline" style="width: 100%;">
+                    <mat-label>Premium Amount</mat-label>
+                    <input formControlName="endorsePremAmtFld" matInput currencyMask placeholder="0.00" value="" type="" maxlength="14" [options]="{ prefix: '', thousands: ',', decimal: '.', suffix:'' }" />
+                </mat-form-field>
+
+                <mat-form-field class="endorseCommFld" appearance="outline" style="width: 100%;">
+                    <mat-label>Commission</mat-label>
+                    <input formControlName="endorseCommFld" matInput currencyMask placeholder="0.00" value="" type="" maxlength="14" [options]="{ prefix: '', thousands: ',', decimal: '.', suffix:'' }" />
+                </mat-form-field>
+
+                <mat-form-field class="endorsePremRateFld" appearance="outline" style="width: 100%;">
+                    <mat-label>Premium Rate</mat-label>
+                    <input formControlName="endorsePremRateFld" matInput currencyMask placeholder="0.00" value="" type="" maxlength="14" [options]="{ prefix: '', thousands: ',', decimal: '.', suffix:'%' }" />
+                </mat-form-field>
+
+                <mat-form-field class="endorseCommRateFld" appearance="outline" style="width: 100%;">
+                    <mat-label>Commission Rate</mat-label>
+                    <input formControlName="endorseCommRateFld" matInput currencyMask placeholder="0.00" value="" type="" maxlength="14" [options]="{ prefix: '', thousands: ',', decimal: '.', suffix:'%' }" />
+                </mat-form-field>
+            </div>
+
+            <div class="endorseReducCovContainer">
+                <div class="endorseReducCovTitleContainer">
+                    <span style="font-weight: bold;">Reduction Coverage</span>
+                </div>
+
+                <mat-form-field class="endorseReducInvnoFld" appearance="outline" style="width: 75%;">
+                    <mat-label>Invoice No.</mat-label>
+                    <mat-select disabled>
+                        <mat-option value="one">1016901</mat-option>
+                        <mat-option value="two">1016902</mat-option>
+                        <mat-option value="two">1016903</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="endorseReducCovFld" appearance="outline" style="width: 75%;">
+                    <mat-label>Reduced Coverage</mat-label>
+                    <mat-select disabled>
+                        <mat-option value="one">M&A</mat-option>
+                        <mat-option value="two">M&A</mat-option>
+                        <mat-option value="two">M&A</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="endorseReducCovDescFld" appearance="outline" style="width: 100%;">
+                    <mat-label>Reduced Coverage Description</mat-label>
+                    <input matInput placeholder="" value="" type="text" disabled>
+                </mat-form-field>
+
+                <mat-form-field class="endorseReducCovAmtFld" appearance="outline" style="width: 100%;">
+                    <mat-label>Reduced Covered Amount</mat-label>
+                    <input formControlName="endorseReducCovAmtFld" matInput currencyMask placeholder="0.00" value="" type="" maxlength="14" [options]="{ prefix: '', thousands: ',', decimal: '.', suffix:'' }" />
+                </mat-form-field>
+
+                <mat-form-field class="endorseReducPremAmtFld" appearance="outline" style="width: 100%;">
+                    <mat-label>Reduced Premium Amount</mat-label>
+                    <input formControlName="endorseReducPremAmtFld" matInput currencyMask placeholder="0.00" value="" type="" maxlength="14" [options]="{ prefix: '', thousands: ',', decimal: '.', suffix:'' }" />
+                </mat-form-field>
+
+                <mat-form-field class="endorseReducCommFld" appearance="outline" style="width: 100%;">
+                    <mat-label>Reduced Commission</mat-label>
+                    <input formControlName="endorseReducCommFld" matInput currencyMask placeholder="0.00" value="" type="" maxlength="14" [options]="{ prefix: '', thousands: ',', decimal: '.', suffix:'' }" />
+                </mat-form-field>
+
+                <mat-form-field class="endorseRemFld" appearance="outline" style="width: 100%;">
+                    <mat-label>Remarks</mat-label>
+                    <textarea matInput formControlName="endorseRemFld"></textarea>
+                </mat-form-field>
+            </div>
+
+            <div class="endorseNetCovContainer">
+                <div class="endorseNetCovTitleContainer">
+                    <span style="font-weight: bold;">Net Coverage</span>
+                </div>
+
+                <mat-form-field class="endorseNetInvnoFld" appearance="outline" style="width: 75%;">
+                    <mat-label>Invoice No.</mat-label>
+                    <mat-select disabled>
+                        <mat-option value="one">1016901</mat-option>
+                        <mat-option value="two">1016902</mat-option>
+                        <mat-option value="two">1016903</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="endorseNetCovFld" appearance="outline" style="width: 75%;">
+                    <mat-label>Net Coverage</mat-label>
+                    <mat-select disabled>
+                        <mat-option value="one">M&A</mat-option>
+                        <mat-option value="two">M&A</mat-option>
+                        <mat-option value="two">M&A</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="endorseNetCovDescFld" appearance="outline" style="width: 100%;">
+                    <mat-label>Net Coverage Description</mat-label>
+                    <input matInput placeholder="" value="" type="text" disabled>
+                </mat-form-field>
+
+                <mat-form-field class="endorseNetCovAmtFld" appearance="outline" style="width: 100%;">
+                    <mat-label>Net Covered Amount</mat-label>
+                    <input formControlName="endorseNetCovAmtFld" matInput currencyMask placeholder="0.00" value="" type="" maxlength="14" [options]="{ prefix: '', thousands: ',', decimal: '.', suffix:'' }" />
+                </mat-form-field>
+
+                <mat-form-field class="endorseNetPremAmtFld" appearance="outline" style="width: 100%;">
+                    <mat-label>Net Premium Amount</mat-label>
+                    <input formControlName="endorseNetPremAmtFld" matInput currencyMask placeholder="0.00" value="" type="" maxlength="14" [options]="{ prefix: '', thousands: ',', decimal: '.', suffix:'' }" />
+                </mat-form-field>
+
+                <mat-form-field class="endorseNetCommFld" appearance="outline" style="width: 100%;">
+                    <mat-label>Net Commission</mat-label>
+                    <input formControlName="endorseNetCommFld" matInput currencyMask placeholder="0.00" value="" type="" maxlength="14" [options]="{ prefix: '', thousands: ',', decimal: '.', suffix:'' }" />
+                </mat-form-field>
+
+            </div>
+        </form>
+    </div>
+</mat-dialog-content>
+<div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button class="endorseCancelBtn" mat-dialog-close><mat-icon>cancel</mat-icon>{{cancelBtn}}</button>
+    <button mat-raised-button class="endorseConfirmBtn" (click)="addDataSCR4104015()"><mat-icon>check_circle</mat-icon>{{actionBtn}}</button>
+</div>

@@ -678,6 +678,90 @@
                     </div>
 
 
+                    <!--CABIE SCR4104012-->
+                    <div class="endorseCoverageSummaryTableContainer">
+
+                        <mat-toolbar style="background-color: white; ">
+                            <span class="endorseSpnBtn"></span>
+                            <button class="endorseAddBtn" mat-raised-button color="primary" (click)="openDialogSCR4104012()"><mat-icon>add_circle</mat-icon>ADD ROW</button>
+                        </mat-toolbar>
+
+
+                        <div class="endorseTableContainer">
+                            <table mat-table [dataSource]="datasourceSCR4104012" class="endorseCovSummTbl">
+                                <ng-container matColumnDef="action">
+                                    <th mat-header-cell *matHeaderCellDef width="100px"></th>
+                                    <td mat-cell *matCellDef="let row" class="tdaction" style="text-align: center; border-right: 1px solid lightgray;">
+                                        <button class="btn-Delete" mat-icon-button (click)="deleteListSCR4104012(row.id)" color="warn" style="padding: 0;">
+                                <mat-icon style="font-size: 20px;">remove_circle</mat-icon>
+                            </button>
+
+                                        <button class="endorseEditBtn" mat-icon-button (click)="editItemSCR4104012(row)" color="primary">
+                              <i class="fas fa-edit" style="font-size: 16px;"></i>
+                          </button>
+                                    </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="id">
+                                    <th mat-header-cell *matHeaderCellDef width="50px">No.</th>
+                                    <td mat-cell *matCellDef="let row" style="text-align: center;"> {{row.id}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="endorseCovFld">
+                                    <th mat-header-cell *matHeaderCellDef width="50px">Coverage</th>
+                                    <td mat-cell *matCellDef="let row" style="text-align: left;"> {{row.endorseCovFld}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="endorseCovDescFld">
+                                    <th mat-header-cell *matHeaderCellDef width="125px">Coverage Description</th>
+                                    <td mat-cell *matCellDef="let row" style="text-align: left;"> {{row.endorseCovDescFld}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="endorseNetCovAmtFld">
+                                    <th mat-header-cell *matHeaderCellDef width="90px">Net Covered Amount</th>
+                                    <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseNetCovAmtFld | currency:" ":"symbol"}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="endorseReducCovAmtFld">
+                                    <th mat-header-cell *matHeaderCellDef width="90px">Reduced Covered Amount</th>
+                                    <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseReducCovAmtFld | currency:" ":"symbol"}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="endorseNetPremAmtFld">
+                                    <th mat-header-cell *matHeaderCellDef width="90px">Net Premium Amount</th>
+                                    <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseNetPremAmtFld | currency:" ":"symbol"}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="endorseReducPremAmtFld">
+                                    <th mat-header-cell *matHeaderCellDef width="90px">Reduced Premium Amount</th>
+                                    <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseReducPremAmtFld | currency:" ":"symbol"}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="endorseNetCommFld">
+                                    <th mat-header-cell *matHeaderCellDef width="90px">Net Commission</th>
+                                    <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseNetCommFld | currency:" ":"symbol"}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="endorseReducCommFld">
+                                    <th mat-header-cell *matHeaderCellDef width="90px">Reduced Commission</th>
+                                    <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseReducCommFld | currency:" ":"symbol"}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="endorseRemFld">
+                                    <th mat-header-cell *matHeaderCellDef width="150px">Remarks</th>
+                                    <td mat-cell *matCellDef="let row" style="text-align: left;"> {{row.endorseRemFld}} </td>
+                                </ng-container>
+
+
+
+                                <tr mat-header-row *matHeaderRowDef="displayedColumnsSCR4104012"></tr>
+                                <tr mat-row *matRowDef="let row; columns: displayedColumnsSCR4104012;"></tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!------------------------------>
+
                     <!--------------->
                 </div>
 
@@ -974,11 +1058,11 @@
 
                             </mat-expansion-panel-header>
 
-                            <div style="display: flex; justify-content: space-evenly;">
-                                <div style="text-align:center">
+                            <div style="display: flex; justify-content: space-between; margin: 0; ">
+                                <div style="text-align:center ">
                                     <p>APPLIED COVERAGE SUMMARY</p>
 
-                                    <table mat-table [dataSource]="endorseApplyCoverageDataSrc">
+                                    <table mat-table [dataSource]="endorseApplyCoverageDataSrc ">
 
                                         <!--- Note that these columns can be defined in any order.
                                           The actual rendered columns are set as a property on the row definition" -->
@@ -1072,6 +1156,118 @@
                                     <!---->
                                 </div>
                             </div>
+
+                            <mat-toolbar style="background-color: white; ">
+                                <span class="endorseSpnBtn"></span>
+                                <button mat-raised-button color="primary" class="endorseAddBtn" (click)="openDialogSCR4104015()"><mat-icon>add_circle</mat-icon>ADD ROW</button>
+                            </mat-toolbar>
+
+                            <div class="endorseTableContainerSCR4104015">
+                                <table mat-table [dataSource]="datasourceSCR4104015" class="endorseCovSummTbl">
+                                    <ng-container matColumnDef="action">
+                                        <th mat-header-cell *matHeaderCellDef width="100px"></th>
+                                        <td mat-cell *matCellDef="let row" class="tdaction" style="text-align: center; border-right: 1px solid lightgray;">
+                                            <button class="btn-Delete" mat-icon-button (click)="deleteListSCR4104015(row.id)" color="warn" style="padding: 0;">
+                                         <mat-icon style="font-size: 20px;">remove_circle</mat-icon>
+                                     </button>
+
+                                            <button class="endorseEditBtn" mat-icon-button (click)="editItemSCR4104015(row)" color="primary">
+                                       <i class="fas fa-edit" style="font-size: 16px;"></i>
+                                   </button>
+                                        </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="id">
+                                        <th mat-header-cell *matHeaderCellDef width="30px">No.</th>
+                                        <td mat-cell *matCellDef="let row" style="text-align: center;"> {{row.id}} </td>
+                                    </ng-container>
+
+                                    <!-- Name Column -->
+                                    <ng-container matColumnDef="endorseInvnoFld">
+                                        <th mat-header-cell *matHeaderCellDef width="130px">Invoice no.</th>
+                                        <td mat-cell *matCellDef="let row" style="text-align: center;"> {{row.endorseInvnoFld}} </td>
+                                    </ng-container>
+
+                                    <!-- Name Column -->
+                                    <ng-container matColumnDef="endorseCovFld">
+                                        <th mat-header-cell *matHeaderCellDef width="130px">Coverage</th>
+                                        <td mat-cell *matCellDef="let row" style="text-align: center;"> {{row.endorseCovFld}} </td>
+                                    </ng-container>
+
+                                    <!-- Weight Column -->
+                                    <ng-container matColumnDef="endorseCovDescFld">
+                                        <th mat-header-cell *matHeaderCellDef width="170px">Coverage Description</th>
+                                        <td mat-cell *matCellDef="let row" style="text-align: left;"> {{row.endorseCovDescFld}} </td>
+                                    </ng-container>
+
+                                    <!-- Name Column -->
+                                    <ng-container matColumnDef="endorseCovAmtFld">
+                                        <th mat-header-cell *matHeaderCellDef width="130px">Covered Amount</th>
+                                        <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseCovAmtFld | currency:" ":"symbol"}} </td>
+                                    </ng-container>
+
+                                    <!-- Name Column -->
+                                    <ng-container matColumnDef="endorseEndorseCovAmtFld">
+                                        <th mat-header-cell *matHeaderCellDef width="130px">Endorse Covered Amount</th>
+                                        <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseReducCovAmtFld | currency:" ":"symbol"}} </td>
+                                    </ng-container>
+
+                                    <!-- Symbol Column -->
+                                    <ng-container matColumnDef="endorseNetCovAmtFld">
+                                        <th mat-header-cell *matHeaderCellDef width="130px">Net Covered Amount</th>
+                                        <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseNetCovAmtFld | currency:" ":"symbol"}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="endorsePremRateFld">
+                                        <th mat-header-cell *matHeaderCellDef width="130px">Premium Rate</th>
+                                        <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorsePremRateFld | currency:" ":"symbol"}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="endorsePremAmtFld">
+                                        <th mat-header-cell *matHeaderCellDef width="130px">Premium Amount</th>
+                                        <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorsePremAmtFld | currency:" ":"symbol"}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="endorseEndorsePremAmtFld">
+                                        <th mat-header-cell *matHeaderCellDef width="130px">Endorse Premium Amount</th>
+                                        <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseReducPremAmtFld | currency:" ":"symbol"}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="endorseNetPremAmtFld">
+                                        <th mat-header-cell *matHeaderCellDef width="130px">Net Premium Amount</th>
+                                        <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseNetPremAmtFld | currency:" ":"symbol"}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="endorseCommRateFld">
+                                        <th mat-header-cell *matHeaderCellDef width="130px">Commission Rate</th>
+                                        <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseCommRateFld | currency:" ":"symbol"}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="endorseCommFld">
+                                        <th mat-header-cell *matHeaderCellDef width="130px">Commission</th>
+                                        <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseCommFld | currency:" ":"symbol"}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="endorseEndorseCommFld">
+                                        <th mat-header-cell *matHeaderCellDef width="130px">Endorse Commission</th>
+                                        <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseReducCommFld | currency:" ":"symbol"}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="endorseNetCommFld">
+                                        <th mat-header-cell *matHeaderCellDef width="130px">Net Commission</th>
+                                        <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseNetCommFld | currency:" ":"symbol"}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="endorseRemFld">
+                                        <th mat-header-cell *matHeaderCellDef width="130px">Remarks</th>
+                                        <td mat-cell *matCellDef="let row" style="text-align: center;"> {{row.endorseRemFld}} </td>
+                                    </ng-container>
+
+
+                                    <tr mat-header-row *matHeaderRowDef="displayedColumnsSCR4104015"></tr>
+                                    <tr mat-row *matRowDef="let row; columns: displayedColumnsSCR4104015;"></tr>
+                                </table>
+                            </div>
                         </mat-expansion-panel>
 
                         <mat-expansion-panel [expanded]="stepCreditMemo === 2" (opened)="setStepTransac(2)" (opened)="endorseCreditMemoExpansionPanel  = true" (closed)="endorseCreditMemoExpansionPanel  = false">
@@ -1158,7 +1354,7 @@
                                     <tr mat-row *matRowDef="let row; columns: displayedCreditMemoSummary;"></tr>
                                 </table>
 
-                                <!---SCR4104016-->
+                                <!---SCR4104016VEL-->
 
 
                                 <mat-toolbar style="background-color: white; ">
@@ -1170,17 +1366,17 @@
                                     <div style="margin-top: 5px;">
 
                                         <div class="" style="padding: 0 auto; overflow-y: hidden; margin: 0 ">
-                                            <table mat-table [dataSource]="endorseDataSrc" style="width: 100%;">
+                                            <table mat-table [dataSource]="endorseDataSrcSCR4104016" style="width: 100%;">
 
 
                                                 <ng-container matColumnDef="endorseTblDataAction">
                                                     <th mat-header-cell *matHeaderCellDef width="100px"></th>
                                                     <td mat-cell *matCellDef="let row" class="endorseTblAction" style="text-align: center; border-right: solid 1px lightgray;">
-                                                        <button mat-icon-button (click)="deleteList(row.id)" color="warn" style="padding: 0;">
+                                                        <button mat-icon-button (click)="deleteListSCR4104016(row.id)" color="warn" style="padding: 0;">
                                                   <mat-icon style="font-size: 16px;">delete</mat-icon>
                                               </button>
 
-                                                        <button mat-icon-button (click)="editItem(row)" color="primary" style="padding: 0;">
+                                                        <button mat-icon-button (click)="editItemSCR4104016(row)" color="primary" style="padding: 0;">
                                                 <i class="fas fa-edit" style="font-size: 16px;"></i>
                                             </button>
                                                     </td>
@@ -1232,8 +1428,8 @@
 
 
 
-                                                <tr mat-header-row *matHeaderRowDef="endorseTbldisplayedColumns"></tr>
-                                                <tr mat-row *matRowDef="let row; columns: endorseTbldisplayedColumns;"></tr>
+                                                <tr mat-header-row *matHeaderRowDef="endorseTbldisplayedColumnsSCR4104016"></tr>
+                                                <tr mat-row *matRowDef="let row; columns: endorseTbldisplayedColumnsSCR4104016;"></tr>
                                             </table>
 
 
