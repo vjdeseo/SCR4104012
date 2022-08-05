@@ -186,14 +186,14 @@
 
                                         <mat-form-field class="endorseTransac1stExPanelDatePicker" appearance="outline">
                                             <mat-label style="color:black">Inception Date</mat-label>
-                                            <input matInput [matDatepicker]="IncepDate">
+                                            <input matInput [matDatepicker]="IncepDate" readonly="true">
                                             <mat-datepicker-toggle matSuffix [for]="IncepDate"></mat-datepicker-toggle>
                                             <mat-datepicker #IncepDate></mat-datepicker>
                                         </mat-form-field>
 
                                         <mat-form-field class="endorseTransac1stExPanelDatePicker" appearance="outline">
                                             <mat-label style="color:black">Expiry Date</mat-label>
-                                            <input matInput [matDatepicker]="ExpDate">
+                                            <input matInput [matDatepicker]="ExpDate" readonly="true">
                                             <mat-datepicker-toggle matSuffix [for]="ExpDate"></mat-datepicker-toggle>
                                             <mat-datepicker #ExpDate></mat-datepicker>
                                         </mat-form-field>
@@ -319,14 +319,14 @@
 
                                                 <mat-form-field class="endorseTransac2ndExPanelDatePicker" appearance="outline">
                                                     <mat-label>Inception Date</mat-label>
-                                                    <input matInput [matDatepicker]="secondEpIncepDate">
+                                                    <input matInput [matDatepicker]="secondEpIncepDate" readonly="true">
                                                     <mat-datepicker-toggle matSuffix [for]="secondEpIncepDate"></mat-datepicker-toggle>
                                                     <mat-datepicker #secondEpIncepDate></mat-datepicker>
                                                 </mat-form-field>
 
                                                 <mat-form-field class="endorseTransac2ndExPanelDatePicker" appearance="outline">
                                                     <mat-label>Expiry Date</mat-label>
-                                                    <input matInput [matDatepicker]="SecondEpExpDate">
+                                                    <input matInput [matDatepicker]="SecondEpExpDate" readonly="true">
                                                     <mat-datepicker-toggle matSuffix [for]="SecondEpExpDate"></mat-datepicker-toggle>
                                                     <mat-datepicker #SecondEpExpDate></mat-datepicker>
                                                 </mat-form-field>
@@ -805,7 +805,7 @@
 
                                                 <mat-form-field class="endorseCreditMemo1stExPanelLeftADatePicker" appearance="outline">
                                                     <mat-label>Billing Date</mat-label>
-                                                    <input matInput [matDatepicker]="stepper4FirstEPBillingDate">
+                                                    <input matInput [matDatepicker]="stepper4FirstEPBillingDate" readonly="true">
                                                     <mat-datepicker-toggle matSuffix [for]="stepper4FirstEPBillingDate"></mat-datepicker-toggle>
                                                     <mat-datepicker #stepper4FirstEPBillingDate></mat-datepicker>
                                                 </mat-form-field>
@@ -1492,7 +1492,7 @@
 
         <mat-step>
             <form>
-                <ng-template matStepLabel>ENDORSEMENT&nbsp;SYSTEM</ng-template>
+                <ng-template matStepLabel>ENDORSEMENT&nbsp;SUMMARY</ng-template>
 
                 <div class="endorseStepperBtnNavigation">
                     <div class="endorseStepperBtnNavigationDivider" style="display: flex;">
