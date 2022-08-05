@@ -188,7 +188,7 @@ endorseTbldisplayedColumnsSCR4104016: string[] = ['endorseTblDataAction','id', '
   openDialogSCR4104012() {
     this.dialog.open(DialogComponentSCR4104012, {      
     width:'60%',
-    height: '46%',
+    height: '48%',
     }).afterClosed().subscribe(val=>{
       if(val == 'SAVE'){
         this.getAllListSCR4104012();
@@ -211,7 +211,7 @@ endorseTbldisplayedColumnsSCR4104016: string[] = ['endorseTblDataAction','id', '
   editItemSCR4104012(row : any){
     this.dialog.open(DialogComponentSCR4104012,{
       width:'60%',
-      height: '46%',
+      height: '48%',
       data : row,
     }).afterClosed().subscribe(val=>{
       if(val == 'UPDATE'){
